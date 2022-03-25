@@ -7334,19 +7334,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Javi\\.nuget\\packages\\": {}
+    "C:\\Users\\Guillermo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\workorooms.csproj",
+      "projectUniqueName": "C:\\Users\\Guillermo\\Desktop\\Nueva carpeta\\back\\workorooms.csproj",
       "projectName": "workorooms",
-      "projectPath": "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\workorooms.csproj",
-      "packagesPath": "C:\\Users\\Javi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\obj\\",
+      "projectPath": "C:\\Users\\Guillermo\\Desktop\\Nueva carpeta\\back\\workorooms.csproj",
+      "packagesPath": "C:\\Users\\Guillermo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Guillermo\\Desktop\\Nueva carpeta\\back\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Javi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Guillermo\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
