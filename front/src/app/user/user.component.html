@@ -1,3 +1,12 @@
 <p>user works!</p>
 
 <button (click)="getdataUser()">Get User</button>
+
+<div *ngFor="let objeto of objetos let i = index">
+
+<p>{{objeto.id}}</p>
+<p>{{objeto.name}}</p>
+<p>{{objeto.surname}}</p>
+<img src="{{objeto.photo}}">
+<p>{{objeto.gmail}}</p>
+</div>
