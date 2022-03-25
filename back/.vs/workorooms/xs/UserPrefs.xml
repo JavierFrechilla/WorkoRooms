@@ -1,13 +1,17 @@
 ﻿<Properties StartupConfiguration="{351A6419-28A2-484D-9AF2-5E3DB8DEBC4F}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Migrations/20220324143738_first.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/DTOBookingWithParticipants.cs">
     <Files>
-      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="Startup.cs" Line="37" Column="1" />
       <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="13" Column="2" />
       <File FileName="Controllers/BookingsController.cs" Line="1" Column="1" />
       <File FileName="Models/Booking.cs" Line="1" Column="1" />
-      <File FileName="Properties/launchSettings.json" Line="1" Column="1" />
+      <File FileName="Properties/launchSettings.json" Line="25" Column="75" />
       <File FileName="Migrations/20220324143738_first.cs" Line="1" Column="1" />
+      <File FileName="Models/User.cs" Line="1" Column="1" />
+      <File FileName="Models/Purpose.cs" Line="1" Column="1" />
+      <File FileName="Models/Participant.cs" Line="1" Column="1" />
+      <File FileName="Models/DTOBookingWithParticipants.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,10 +19,10 @@
           <Node name="workorooms" expanded="True">
             <Node name="workorooms" expanded="True">
               <Node name="Controllers" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20220324143738_first.cs" selected="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="DTOBookingWithParticipants.cs" selected="True" />
               </Node>
-              <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
             </Node>
           </Node>
