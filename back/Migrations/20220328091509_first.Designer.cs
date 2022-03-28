@@ -10,7 +10,7 @@ using workorooms.Data;
 namespace workorooms.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220324143738_first")]
+    [Migration("20220328091509_first")]
     partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -32,9 +32,6 @@ namespace workorooms.Migrations
 
                     b.Property<DateTime>("DateOut")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("Participants")
-                        .HasColumnType("int");
 
                     b.Property<int>("PurposeId")
                         .HasColumnType("int");
@@ -86,12 +83,16 @@ namespace workorooms.Migrations
                     b.Property<int?>("DTOBookingWithParticipantsId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BookingId");
+
                     b.HasIndex("DTOBookingWithParticipantsId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Participant");
                 });
@@ -232,9 +233,23 @@ namespace workorooms.Migrations
 
             modelBuilder.Entity("workorooms.Models.Participant", b =>
                 {
+                    b.HasOne("workorooms.Models.Booking", "Booking")
+                        .WithMany()
+                        .HasForeignKey("BookingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("workorooms.Models.DTOBookingWithParticipants", null)
                         .WithMany("Participants")
                         .HasForeignKey("DTOBookingWithParticipantsId");
+
+                    b.HasOne("workorooms.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Booking");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("workorooms.Models.Resource", b =>

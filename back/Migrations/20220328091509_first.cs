@@ -86,8 +86,7 @@ namespace workorooms.Migrations
                     PurposeId = table.Column<int>(type: "int", nullable: false),
                     RoomId = table.Column<int>(type: "int", nullable: false),
                     DateIn = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    DateOut = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Participants = table.Column<int>(type: "int", nullable: false)
+                    DateOut = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -137,7 +136,7 @@ namespace workorooms.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: true),
                     BookingId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     DTOBookingWithParticipantsId = table.Column<int>(type: "int", nullable: true)
                 },
@@ -145,11 +144,23 @@ namespace workorooms.Migrations
                 {
                     table.PrimaryKey("PK_Participant", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_Participant_Booking_BookingId",
+                        column: x => x.BookingId,
+                        principalTable: "Booking",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
                         name: "FK_Participant_DTOBookingWithParticipants_DTOBookingWithParticipantsId",
                         column: x => x.DTOBookingWithParticipantsId,
                         principalTable: "DTOBookingWithParticipants",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Participant_User_UserId",
+                        column: x => x.UserId,
+                        principalTable: "User",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateIndex(
@@ -173,9 +184,19 @@ namespace workorooms.Migrations
                 column: "BookingId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Participant_BookingId",
+                table: "Participant",
+                column: "BookingId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Participant_DTOBookingWithParticipantsId",
                 table: "Participant",
                 column: "DTOBookingWithParticipantsId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Participant_UserId",
+                table: "Participant",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Resource_RoomId",
