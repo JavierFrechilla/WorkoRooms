@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
@@ -10,6 +10,14 @@ import { PurposeComponent } from './purpose/purpose.component';
 import { ParticipantComponent } from './participant/participant.component';
 import { BookingComponent } from './booking/booking.component';
 import { DtobookingComponent } from './dtobooking/dtobooking.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
+import { IntroComponent } from './intro/intro.component';
+import { WatermarkComponent } from './watermark/watermark.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +28,20 @@ import { DtobookingComponent } from './dtobooking/dtobooking.component';
     ParticipantComponent,
     BookingComponent,
     DtobookingComponent,
+    IntroComponent,
+    WatermarkComponent,
+    
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatSliderModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
