@@ -7334,28 +7334,26 @@
     ]
   },
   "packageFolders": {
-    "/Users/unaxgomez/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Javi\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/unaxgomez/Desktop/BOOTCAMP/MODULO3/reto_empresa/back/workorooms.csproj",
+      "projectUniqueName": "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\workorooms.csproj",
       "projectName": "workorooms",
-      "projectPath": "/Users/unaxgomez/Desktop/BOOTCAMP/MODULO3/reto_empresa/back/workorooms.csproj",
-      "packagesPath": "/Users/unaxgomez/.nuget/packages/",
-      "outputPath": "/Users/unaxgomez/Desktop/BOOTCAMP/MODULO3/reto_empresa/back/obj/",
+      "projectPath": "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\workorooms.csproj",
+      "packagesPath": "C:\\Users\\Javi\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "/Users/unaxgomez/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Javi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7421,12 +7419,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.osx-x64",
-            "version": "[5.0.14, 5.0.14]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -7435,7 +7427,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.200/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
