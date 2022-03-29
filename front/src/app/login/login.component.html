@@ -10,6 +10,6 @@
         <h4>Contraseña</h4>
         <input type="password" [(ngModel)]="lo.password">
 
-        <button (click)="checkUser()">Iniciar sesión</button>
+        <button (click)="checkUser()" *ngIf="lo.gmail !='' && lo.password !=''">Iniciar sesión</button>
 
     </div>
