@@ -11,5 +11,6 @@
         <input type="password" [(ngModel)]="lo.password">
 
         <button (click)="checkUser()" *ngIf="lo.gmail !='' && lo.password !=''">Iniciar sesión</button>
+        <p *ngIf="notLogged">Email o contraseña incorrectas. Inténtelo de nuevo.</p> 
 
     </div>
