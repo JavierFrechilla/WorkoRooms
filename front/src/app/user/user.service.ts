@@ -19,8 +19,6 @@ export class UserService {
   }
 
   checkUser(email: string, password: string): Observable<number>{
-    return this.http.get<number>('https://localhost:44377/api/Users/login/' + email + '/' + password)
+    return this.http.get<number>('https://localhost:44377/api/users/login/' + email + '/' + password)
   }
 }
-  
-
