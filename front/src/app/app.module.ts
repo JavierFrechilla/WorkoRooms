@@ -11,6 +11,7 @@ import { ParticipantComponent } from './participant/participant.component';
 import { BookingComponent } from './booking/booking.component';
 import { DtobookingComponent } from './dtobooking/dtobooking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -20,7 +21,8 @@ import { IntroComponent } from './intro/intro.component';
 import { WatermarkComponent } from './watermark/watermark.component';
 
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './login/login.component';
+
+
 
 const routes: Routes = [
 
