@@ -16,10 +16,10 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getdataUser():void{
-    this.UserService.getUser().subscribe(data=>{this.objetos=data;
-    console.log(this.objetos);
-  })
-  }
+  // getdataUser():void{
+  //   this.UserService.getUsers().subscribe(data=>{this.objetos=data;
+  //   console.log(this.objetos);
+  // })
+  // }
 
 }
