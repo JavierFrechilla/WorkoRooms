@@ -21,6 +21,8 @@ import { IntroComponent } from './intro/intro.component';
 import { WatermarkComponent } from './watermark/watermark.component';
 
 import { RouterModule, Routes } from '@angular/router';
+import { RegisterComponent } from './register/register.component';
+import { MainComponent } from './main/main.component';
 
 
 
@@ -28,6 +30,7 @@ const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
   {path: '', component: IntroComponent},
+  {path:'register',component:RegisterComponent}
   // {path: '**', component: NotfoundComponent},
 
 ]
@@ -44,6 +47,7 @@ const routes: Routes = [
     IntroComponent,
     WatermarkComponent,
     LoginComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,
