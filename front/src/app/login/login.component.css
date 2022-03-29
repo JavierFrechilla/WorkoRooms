@@ -1,0 +1,38 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 4em;
+    /* justify-content: center; */
+    text-align: center;
+    height: 90vh;
+    justify-content: center;
+}
+
+.logoContainer{
+    padding: 2vh;
+    cursor: pointer;
+    height: 5%;
+}
+
+.logoContainer img{
+    height: 100%;
+}
+
+img:hover{
+    background-image: "assets/logo/Logo_Workoholics_pink.svg";
+}
+
+.form h4{
+    font-size: 2em;
+    color: #212222;
+}
+
+button{
+    margin-top: 10%;
+    background-color: #FB088C;
+    height: 10%;
+    font-family: "Moderat";
+    color: white;
+}

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace workorooms.Models
@@ -12,9 +13,9 @@ namespace workorooms.Models
         public int RoomId { get; set; }
         public DateTime DateIn { get; set; }
         public DateTime DateOut { get; set; }
-        public int Participants { get; set; }
         public User User { get; set; }
         public Purpose Purpose { get; set; }
         public Room Room { get; set; }
+        List<Participant> Participants { get; set; }
     }
 }
