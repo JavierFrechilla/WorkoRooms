@@ -28,6 +28,21 @@ namespace workorooms.Controllers
             return await _context.User.ToListAsync();
         }
 
+        
+        // GET PARA EL LOGIN
+        [HttpGet("login/{email}/{password}")]
+        public async Task<ActionResult<int>> LogIn(string email, string password)
+        {
+            var user = await _context.User.Where(u => u.Gmail == email && u.Password == password).FirstOrDefaultAsync();
+
+            if (user == null)
+            {
+                return -1;
+            }
+
+            return user.Id;
+        }
+
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
