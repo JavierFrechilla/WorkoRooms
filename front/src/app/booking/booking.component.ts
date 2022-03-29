@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Booking } from './booking';
+import { BookingService } from './booking.service';
 
 @Component({
   selector: 'app-booking',
@@ -7,9 +9,44 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: BookingService) { }
 
+  newBooking: Booking = {
+    userId: 0,
+    purposeId: 0,
+    roomId: 0,
+    dateIn: new Date(),
+    dateOut: new Date(),
+    participants: [],
+  };
+  booking?: Booking;
+  bookings?: Booking[];
+  
   ngOnInit(): void {
   }
 
+  getBookings():void{
+    this.service.getBookings().subscribe(data=>{this.bookings=data;
+    console.log(this.bookings);
+  })
+  }
+
+  postBooking():void{
+    this.service.postBooking(this.newBooking).subscribe()
+  }
+
+  updateBooking(bookingUpdate: Booking):void{
+    if (this.booking != undefined && bookingUpdate?.roomId != undefined) {
+      this.booking.roomId = bookingUpdate.roomId
+      this.service.updateBooking(this.booking).subscribe()
+      console.log(this.booking)
+    }
+  }
+
+  deleteBooking(booking: Booking): void{
+    if (booking.id != undefined)
+    {
+      this.service.deleteBooking(booking.id).subscribe();
+    }
+  }
 }
