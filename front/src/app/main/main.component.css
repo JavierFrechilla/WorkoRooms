@@ -1,0 +1,55 @@
+.logoContainer {
+    padding: 2vh;
+    cursor: pointer;
+    height: 5%;
+}
+
+.logoContainer img {
+    height: 100%;
+}
+
+.wellcome {
+    /* background-color: aqua; */
+    padding: 30px;
+    width: 10vw;
+    align-items: flex-end;
+    margin-right: 15vw;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu a {
+    padding: 3px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: #fb088c
+}
+
+.rooms {
+    display: flex;
+    justify-content: center;
+}
+
+.plano img {
+    display: flex;
+    height: 70vh;
+    transform: rotate(90deg);
+}
+
+@media(max-width:767px) {
+    .plano img {
+        transform: rotate(360deg);
+    }
+}
