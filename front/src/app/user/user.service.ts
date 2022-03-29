@@ -30,5 +30,3 @@ export class UserService {
     return this.http.post<User>('https://localhost:44377/api/Users', user, this.httpOptions)
   }
 }
-  
-

@@ -5,11 +5,11 @@
     <div class="form">
         
         <h4>Email</h4>
-        <input type="text">
+        <input type="text" [(ngModel)]="lo.gmail">
 
         <h4>Contraseña</h4>
-        <input type="password">
+        <input type="password" [(ngModel)]="lo.password">
 
-        <button (click)="checkUser()" [(ngModel)]="lo.password">Iniciar sesión</button>
+        <button (click)="checkUser()" *ngIf="lo.gmail !='' && lo.password !=''">Iniciar sesión</button>
 
     </div>
