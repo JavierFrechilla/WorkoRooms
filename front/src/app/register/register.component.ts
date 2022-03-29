@@ -12,7 +12,6 @@ export class RegisterComponent implements OnInit {
   constructor(public service: UserService) { }
 
   newUser: User = {
-    id: 0,
     name: '',
     surname: '',
     photo: '',
@@ -24,7 +23,7 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  postLoadout():void{
+  postUser():void{
     this.service.postUser(this.newUser).subscribe()
   }
 }
