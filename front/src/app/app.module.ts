@@ -19,6 +19,17 @@ import { MatSliderModule } from '@angular/material/slider';
 import { IntroComponent } from './intro/intro.component';
 import { WatermarkComponent } from './watermark/watermark.component';
 
+import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './login/login.component';
+
+const routes: Routes = [
+
+  {path: 'login', component: LoginComponent},
+  {path: '', component: IntroComponent},
+  // {path: '**', component: NotfoundComponent},
+
+]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +41,7 @@ import { WatermarkComponent } from './watermark/watermark.component';
     DtobookingComponent,
     IntroComponent,
     WatermarkComponent,
-    
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,6 +50,7 @@ import { WatermarkComponent } from './watermark/watermark.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatSliderModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent],
