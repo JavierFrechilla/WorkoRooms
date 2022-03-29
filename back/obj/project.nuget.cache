@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "e4orbj0CnNrJXblzNLZ8uxNXyVkMx0azaFUcpG9Z/DdY7vjKxCL/KsqtvJNKq94sGlGJuVEYc8xDj+SP/99f9w==",
+  "dgSpecHash": "M/GRUr3yND7X1c/DjQr0uj1hjbKPRNYkPCEk8ku5gVCbDBxZ1fqmu8DmlvAXePtMSX8s2dvpmZf6R043Fpznrw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\workorooms.csproj",
+  "projectFilePath": "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\workorooms.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Javi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Javi\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

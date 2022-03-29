@@ -1,0 +1,44 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 95vh;
+    align-items: center;
+    gap: 10%;
+}
+
+.circle{
+    width: 35%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    z-index: -1;
+}
+
+@keyframes rotating {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to{
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.rotating {
+    animation: rotating 60s linear infinite;
+}
+
+@media(max-width: 767px){
+    .container{
+        flex-direction: column;
+    }
+
+    .pinkButton{
+        width: 40%;
+    }
+
+    .greyButton{
+        width: 40%;
+    }
+}
+

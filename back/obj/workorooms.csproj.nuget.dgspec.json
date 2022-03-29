@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\workorooms.csproj": {}
+    "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\workorooms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\workorooms.csproj": {
+    "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\workorooms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\workorooms.csproj",
+        "projectUniqueName": "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\workorooms.csproj",
         "projectName": "workorooms",
-        "projectPath": "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\workorooms.csproj",
+        "projectPath": "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\workorooms.csproj",
         "packagesPath": "C:\\Users\\Javi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Javi\\Desktop\\Workoholics\\workorooms\\obj\\",
+        "outputPath": "C:\\Users\\Javi\\Desktop\\WorkoRooms\\back\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Javi\\AppData\\Roaming\\NuGet\\NuGet.Config",
