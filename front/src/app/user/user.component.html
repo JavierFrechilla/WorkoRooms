@@ -1,17 +1,17 @@
 <p>user works!</p>
 
-<button (click)="getdataUser()">Get User</button>
+<!-- <button (click)="getdataUser()">Get User</button> -->
 
 <div *ngFor="let objeto of objetos let i = index">
 
-<p>{{objeto.id}}</p>
-<p>{{objeto.name}}</p>
-<p>{{objeto.surname}}</p>
-<img src="{{objeto.photo}}">
-<p>{{objeto.gmail}}</p>
+    <p>{{objeto.id}}</p>
+    <p>{{objeto.name}}</p>
+    <p>{{objeto.surname}}</p>
+    <img src="{{objeto.photo}}">
+    <p>{{objeto.gmail}}</p>
 
-<mat-slider min="1" max="100" step="1" value="50"></mat-slider>
-<button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
+    <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
     <mat-icon>delete</mat-icon>
   </button>
 
