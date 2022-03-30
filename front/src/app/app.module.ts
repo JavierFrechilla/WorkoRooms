@@ -12,8 +12,7 @@ import { BookingComponent } from './booking/booking.component';
 import { DtobookingComponent } from './dtobooking/dtobooking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginComponent } from './login/login.component';
-
-
+import { NotfoundComponent } from './notfound/notfound.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
@@ -27,7 +26,6 @@ import { Observable } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 
-
 const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
@@ -36,7 +34,8 @@ const routes: Routes = [
   {path:'main',component: MainComponent},
   {path:'user',component: UserComponent},
   {path:'profile',component: ProfileComponent},
-  // {path: '**', component: NotfoundComponent},
+  {path: 'main/booking', component:BookingComponent},
+  {path: '**', component: NotfoundComponent},
 
 ]
 
@@ -56,6 +55,7 @@ const routes: Routes = [
     RegisterComponent,
     NavbarComponent,
     ProfileComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

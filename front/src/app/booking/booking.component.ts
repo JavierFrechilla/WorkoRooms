@@ -35,9 +35,9 @@ export class BookingComponent implements OnInit {
     this.service.postBooking(this.newBooking).subscribe()
   }
 
-  updateBooking(bookingUpdate: Booking):void{
-    if (this.booking != undefined && bookingUpdate?.roomId != undefined) {
-      this.booking.roomId = bookingUpdate.roomId
+  updateBooking(booking: Booking):void{
+    if (booking != undefined) {
+      this.booking = booking
       this.service.updateBooking(this.booking).subscribe()
       console.log(this.booking)
     }
