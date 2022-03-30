@@ -20,12 +20,12 @@ import { MatSliderModule } from '@angular/material/slider';
 import { IntroComponent } from './intro/intro.component';
 import { WatermarkComponent } from './watermark/watermark.component';
 
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
-import { Observable } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
+
 
 
 const routes: Routes = [
@@ -36,6 +36,7 @@ const routes: Routes = [
   {path:'main',component: MainComponent},
   {path:'user',component: UserComponent},
   {path:'profile',component: ProfileComponent},
+  {path:'booking',component: BookingComponent},
   // {path: '**', component: NotfoundComponent},
 
 ]

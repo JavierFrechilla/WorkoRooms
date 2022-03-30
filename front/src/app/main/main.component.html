@@ -3,15 +3,10 @@
         <img src="assets/logo/Logo_Workoholics.svg" alt="logo" routerLink="/main">
         
     </div>
-    <div class="welcome">Bienvenido, {{user.name}} {{user.surname}}</div>
+</div>
+<h3 class="welcome">Bienvenido, {{user.name}}</h3>
     <a class="logout" routerLink="" (click)="logOut()">Cerrar sesión</a>
-</div>
-
-<div class="menu">
-    <a href=""> Mis reservas / </a>
-    <a href=""> Espacios / </a>
-    <a routerLink="/profile"> Mi perfil </a>
-</div>
+<p class="centerSubtitle">Echa un vistazo a las reservas actuales y gestiona tu tiempo.</p>
 
 <div class="rooms">
     <div class="map">
@@ -20,7 +15,7 @@
 </div>
 
 <div class="navBar">
-    <img class="icon" src="assets/img/home.png" alt="" routerLink="main">
-    <img class="icon" src="assets/img/booking.png" alt="" routerLink="booking">
-    <img class="icon" src="assets/img/user.png" alt="" routerLink="user">
+    <img class="icon" src="assets/img/home.png" alt="" routerLink="/main">
+    <img class="icon" src="assets/img/booking.png" alt="" routerLink="/booking">
+    <img class="icon" src="assets/img/user.png" alt="" routerLink="/user">
     </div>
