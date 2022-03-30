@@ -5,22 +5,22 @@
 <div class="form">
 
     <h4>Nombre</h4>
-    <input type="text">
+    <input type="text" [(ngModel)]="us.name">
 
     <h4>Apellido</h4>
-    <input type="text">
+    <input type="text" [(ngModel)]="us.surname">
 
     <h4>Email</h4>
-    <input type="email">
+    <input type="email" [(ngModel)]="us.gmail">
 
     <h4>Contraseña</h4>
-    <input type="text">
+    <input type="text" [(ngModel)]="us.password">
 
     <h4>Rol</h4>
-    <input type="text">
+    <input type="text" [(ngModel)]="us.role">
     <h4>Foto</h4>
-    <input class="image" type="file" accept="image/png, image/jpeg">
+    <input class="image" type="file" accept="image/png, image/jpeg" [(ngModel)]="us.photo">
 
-
+    <button (click)="postUser()" *ngIf="us.password !=''">Registrarse</button>
 
 </div>
