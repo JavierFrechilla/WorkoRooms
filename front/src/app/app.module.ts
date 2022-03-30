@@ -19,13 +19,17 @@ import { MatSliderModule } from '@angular/material/slider';
 import { IntroComponent } from './intro/intro.component';
 import { WatermarkComponent } from './watermark/watermark.component';
 
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
-import { Observable } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> dev-shiift
 const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
