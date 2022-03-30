@@ -1,4 +1,4 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
@@ -20,10 +20,11 @@ import { MatSliderModule } from '@angular/material/slider';
 import { IntroComponent } from './intro/intro.component';
 import { WatermarkComponent } from './watermark/watermark.component';
 
-import { RouterModule, Routes } from '@angular/router';
+import { ActivatedRouteSnapshot, CanActivate, Router, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
 import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
-
+import { Observable } from 'rxjs';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 const routes: Routes = [
@@ -49,6 +50,8 @@ const routes: Routes = [
     WatermarkComponent,
     LoginComponent,
     MainComponent,
+    RegisterComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
