@@ -1,1 +1,19 @@
-<p>main works!</p>
+<div class="header">
+    <div class="logoContainer">
+        <img src="assets/logo/Logo_Workoholics.svg" alt="logo" routerLink="main">
+        
+    </div>
+    <div class="welcome">Bienvenido: {{user.name}} {{user.surname}}</div>
+    <a class="logout" routerLink="" (click)="logOut()">Cerrar sesión</a>
+</div>
+
+<div class="menu">
+    <a href=""> Mis reservas / </a>
+    <a href=""> Espacios / </a>
+    <a href=""> Mi perfil </a>
+</div>
+<div class="rooms">
+    <div class="map">
+        <img class="mapa" src="../../assets/img/map.svg" alt="">
+    </div>
+</div>

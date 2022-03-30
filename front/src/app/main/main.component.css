@@ -1,0 +1,63 @@
+.logoContainer {
+    padding: 2vh;
+    cursor: pointer;
+    height: 5%;
+}
+
+.logoContainer img {
+    height: 100%;
+}
+
+.welcome {
+    /* background-color: aqua; */
+    padding: 30px;
+    width: 10vw;
+    align-items: flex-end;
+    margin-right: 15vw;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu a {
+    padding: 3px;
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    color: #fb088c
+}
+
+.rooms {
+    display: flex;
+    justify-content: center;
+}
+
+.map img {
+    display: flex;
+    height: 70vh;
+    transform: rotate(90deg);
+}
+
+.logout{
+    color: #fb088c;
+    font-family: 'Moderat';
+}
+
+@media(max-width:767px) {
+    .map img {
+        transform: rotate(360deg);
+    }
+}
