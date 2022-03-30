@@ -1,1 +1,42 @@
-<p>booking works!</p>
+<button (click)="getBookings()">Reuniones existentes</button>
+<div *ngIf="bookings != undefined">
+    <div *ngFor="let booking of bookings; let i = index">
+
+        <h4>userId</h4>
+        <input type="number" [(ngModel)]="booking.userId">
+
+        <h4>purposeId</h4>
+        <input type="number" [(ngModel)]="booking.purposeId">
+        
+        <h4>roomId</h4>
+        <input type="number" [(ngModel)]="booking.roomId">
+        
+        <h4>dateIn</h4>
+        <input type="datetime" [(ngModel)]="booking.dateIn">
+        
+        <h4>dateOut</h4>
+        <input type="datetime" [(ngModel)]="booking.dateOut">
+        
+        <button (click)="updateBooking(booking)">Actualizar datos</button>
+        <button type="button" class="delete" title="delete loadout" (click)="deleteBooking(booking)">Borrar reunión</button>
+   
+    </div>
+</div>
+<div>
+    <h4>userId</h4>
+    <input type="number" [(ngModel)]="newBooking.userId">
+
+    <h4>purposeId</h4>
+    <input type="number" [(ngModel)]="newBooking.purposeId">
+
+    <h4>roomId</h4>
+    <input type="number" [(ngModel)]="newBooking.roomId">
+
+    <h4>dateIn</h4>
+    <input type="datetime" [(ngModel)]="newBooking.dateIn">
+
+    <h4>dateOut</h4>
+    <input type="datetime" [(ngModel)]="newBooking.dateOut">
+
+    <button (click)="postBooking()">Crear reunión</button>
+</div>
