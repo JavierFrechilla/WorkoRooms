@@ -56,6 +56,20 @@ namespace workorooms.Controllers
 
             return user;
         }
+        
+        // GET Booking del User logueado
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBooking(int id)
+        {
+            var booking = await _context.Booking.Where(b => b.UserId == id).ToListAsync();
+
+            if (booking == null)
+            {
+                return NotFound();
+            }
+
+            return booking;
+        }
 
         // PUT: api/Users/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754

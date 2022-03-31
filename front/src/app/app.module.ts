@@ -25,11 +25,6 @@ import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> dev-shiift
 const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
@@ -38,7 +33,7 @@ const routes: Routes = [
   {path:'main',component: MainComponent},
   {path:'user',component: UserComponent},
   {path:'profile',component: ProfileComponent},
-  {path: 'main/booking', component:BookingComponent},
+  {path: 'booking', component:BookingComponent},
   {path: '**', component: NotfoundComponent},
 
 ]
