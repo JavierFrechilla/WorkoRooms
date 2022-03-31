@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Moderat";
+    src: local("Moderat"), url(src/assets/fonts/Moderat_Extended_Bold.otf) format("opentype");
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+
+
+/* @keyframes slideInLeft {
+    100% {
+      transform: translateY(-100%);
+      background-color: #FB088C;
+    }
+    0% {
+      transform: translateY(0);
+      background-color: #FB088C;
+    }
+  } */
+
+  .background{
+      z-index: 2;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      animation: 3s ease-in-out 0s 1 slideInLeft;
+      
+  }
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background-color: #212222;
+}
+
+
+
+
+button{
+    border: none;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+
+
+.pinkButton{
+    font-family: "Moderat";
+    background-color: #FB088C;
+    color: white;
+    height: 10%;
+    width: 20%;
+}
+
+.pinkButton:hover{
+    background-color: #b91a72;
+}
+
+.greyButton{
+    font-family: "Moderat";
+    background-color: white;
+    border: 0.2em solid #c7c7c7;
+    color: #c7c7c7;
+    height: 10%;
+    width: 20%;
+}
+
+.greyButton:hover{
+    background-color: #c7c7c7;
+    color: white;
+}
+
+input{
+   border: none;
+   background-color: #f3f4f5;
+   height: 5%;
+   border-radius: 0.3em;
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

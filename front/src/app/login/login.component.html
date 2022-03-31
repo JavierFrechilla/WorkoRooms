@@ -1,0 +1,21 @@
+    <div class="logoContainer">
+        <img src="assets/logo/Logo_Workoholics.svg" alt="logo" routerLink="">
+    </div>
+
+    <div class="loginElements">
+
+        <img src="https://uning.es/wp-content/uploads/2016/08/ef3-placeholder-image.jpg" alt="placeholder">
+
+        <div class="form">
+
+            <h3>Inicio de sesión</h3>
+        
+            <input placeholder="Correo" type="text" [(ngModel)]="lo.gmail">
+            
+            <input placeholder="Contraseña" type="password" [(ngModel)]="lo.password">
+
+
+            <button (click)="checkUser()" *ngIf="lo.gmail !='' && lo.password !=''">Iniciar sesión</button>
+            <p *ngIf="notLogged">Email o contraseña incorrectas. Inténtelo de nuevo.</p> 
+        </div>
+    </div>

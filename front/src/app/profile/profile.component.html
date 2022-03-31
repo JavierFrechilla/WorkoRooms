@@ -1,0 +1,25 @@
+<div *ngIf="us != undefined" class="form">
+
+    <h4>Nombre</h4>
+    <input type="text" [(ngModel)]="us.name">
+
+    <h4>Apellido</h4>
+    <input type="text" [(ngModel)]="us.surname">
+
+    <h4>Email</h4>
+    <input type="email" [(ngModel)]="us.gmail">
+
+    <h4>Contraseña</h4>
+    <input type="text" [(ngModel)]="us.password">
+
+    <h4>Rol</h4>
+    <input type="text" [(ngModel)]="us.role">
+    <!-- <h4>Foto</h4>
+    <input class="image" type="file" accept="image/png, image/jpeg" [(ngModel)]="us.photo"> -->
+
+    <button (click)="updateUser(us)">Actualizar datos</button>
+
+</div>
+<div *ngIf="id!=undefined">
+    <button type="button" class="delete" title="delete loadout" (click)="deleteUser(id)">Borrar User</button>
+</div>
