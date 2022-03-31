@@ -25,11 +25,6 @@ import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> dev-shiift
 const routes: Routes = [
 
   {path: 'login', component: LoginComponent},
