@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
       this.logged = data;
       if(this.logged != -1){
         localStorage.setItem("User", this.logged.toString())
-        location.href = "/";
+        location.href = "/main";
       }else{
         this.notLogged = true;
       }

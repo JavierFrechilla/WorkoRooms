@@ -29,6 +29,12 @@ export class UserService {
   postUser(user: User):Observable<User>{
     return this.http.post<User>('https://localhost:44377/api/Users', user, this.httpOptions)
   }
-}
-  
 
+  updateUser(user: User): Observable<any>{
+    return this.http.put('https://localhost:44377/api/Users/'+user.id, user, this.httpOptions)
+  }
+
+  deleteUser(id: number): Observable<User>{
+    return this.http.delete<User>('https://localhost:44377/api/Users/'+id, this.httpOptions)
+  }
+}

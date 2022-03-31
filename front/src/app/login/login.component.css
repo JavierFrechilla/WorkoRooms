@@ -1,11 +1,9 @@
 .form{
     display: flex;
     flex-direction: column;
-    width: 40%;
-    margin: auto;
-    margin-bottom: 4em;
+    width: 20%;
+    gap: 2em;
     /* justify-content: center; */
-    text-align: center;
     height: 90vh;
     justify-content: center;
 }
@@ -24,15 +22,25 @@ img:hover{
     background-image: "assets/logo/Logo_Workoholics_pink.svg";
 }
 
-.form h4{
-    font-size: 2em;
-    color: #212222;
-}
-
 button{
     margin-top: 10%;
     background-color: #FB088C;
     height: 10%;
     font-family: "Moderat";
     color: white;
+}
+
+.loginElements{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-left: 2em;
+    margin-right: 2em;
+    align-items: center;
+    justify-content: space-around;
+}
+
+img{
+    width: 30%;
+    height: 30%;
 }

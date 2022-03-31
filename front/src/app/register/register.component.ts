@@ -9,10 +9,9 @@ import { UserService } from '../user/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(public service: UserService) { }
+  
 
-  newUser: User = {
-    id: 0,
+  us: User = {
     name: '',
     surname: '',
     photo: '',
@@ -21,10 +20,13 @@ export class RegisterComponent implements OnInit {
     role: '',
   };
 
+  constructor(public service: UserService) { }
+
   ngOnInit(): void {
   }
 
-  postLoadout():void{
-    this.service.postUser(this.newUser).subscribe()
+  postUser():void{
+    this.service.postUser(this.us).subscribe()
+    location.href = "/login";
   }
 }

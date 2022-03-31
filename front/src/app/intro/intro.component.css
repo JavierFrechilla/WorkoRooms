@@ -1,3 +1,4 @@
+
 .container{
     display: flex;
     flex-direction: row;
@@ -24,6 +25,34 @@
     }
 }
 
+.loginButton{
+    font-family: "Moderat";
+    background-color: #212222;
+    border: 0.2em solid white;
+    color: white;
+    height: 10%;
+    width: 20%;
+}
+
+.loginButton:hover{
+    background-color: white;
+    color: #FB088C;
+    
+}
+
+.registerButton{
+    font-family: "Moderat";
+    background-color: #FB088C;
+    color: white;
+    height: 10%;
+    width: 20%;
+}
+
+.registerButton:hover{
+    background-color: white;
+    color: #FB088C;
+}
+
 .rotating {
     animation: rotating 60s linear infinite;
 }
@@ -33,11 +62,7 @@
         flex-direction: column;
     }
 
-    .pinkButton{
-        width: 40%;
-    }
-
-    .greyButton{
+    .loginButton .registerButton{
         width: 40%;
     }
 }

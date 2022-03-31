@@ -1,7 +1,12 @@
+import { Participant } from "../participant/participant";
+
 export interface Booking {
-    id: number,
+    id?: number,
+    userId: number,
+    purposeId: number,
+    roomId: number
     dateIn: Date,
     dateOut: Date,
-    participants: string,
+    participants: Participant[],
 
 }

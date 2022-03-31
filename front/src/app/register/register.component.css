@@ -29,3 +29,11 @@ img:hover {
     align-items: center;
     text-align: center;
 }
+
+button{
+    margin-top: 10%;
+    background-color: #FB088C;
+    height: 10%;
+    font-family: "Moderat";
+    color: white;
+}
