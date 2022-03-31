@@ -1,25 +1,16 @@
 .form{
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 30%;
     gap: 2em;
     /* justify-content: center; */
     height: 90vh;
     justify-content: center;
 }
 
-.logoContainer{
-    padding: 2vh;
-    cursor: pointer;
-    height: 5%;
-}
-
-.logoContainer img{
-    height: 100%;
-}
-
-img:hover{
-    background-image: "assets/logo/Logo_Workoholics_pink.svg";
+h3{
+    font-size: 2em;
+    margin: 0;
 }
 
 button{
@@ -30,17 +21,51 @@ button{
     color: white;
 }
 
+button:hover{
+    background-color: #b91a72;
+}
+
 .loginElements{
     display: flex;
     flex-direction: row;
     align-content: center;
-    margin-left: 2em;
-    margin-right: 2em;
     align-items: center;
     justify-content: space-around;
 }
 
 img{
-    width: 30%;
-    height: 30%;
+    max-width: 35%;
+}
+
+
+@media(max-width: 767px){
+    .loginElements{
+        flex-direction: column;
+    }
+
+    .form{
+        width: 80%;
+        justify-content: flex-start;
+        margin-top: 2em;
+    }
+
+    input{
+        height: 10%;
+    }
+
+    .logoContainer{
+        text-align: center;
+    }
+
+    img{
+        min-width: 70%;
+    }
+
+    h3{
+        margin: 0;
+    }
+
+    button{
+        margin:0;
+    }
 }
