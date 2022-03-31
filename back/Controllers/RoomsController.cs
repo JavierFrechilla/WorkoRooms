@@ -42,6 +42,20 @@ namespace workorooms.Controllers
             return room;
         }
 
+        // GET Booking de la Room seleccionada
+        [HttpGet("{id}")]
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBooking(int id)
+        {
+            var booking = await _context.Booking.Where(b => b.RoomId == id).ToListAsync();
+
+            if (booking == null)
+            {
+                return NotFound();
+            }
+
+            return booking;
+        }
+
         // PUT: api/Rooms/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]

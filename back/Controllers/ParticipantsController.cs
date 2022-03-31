@@ -84,6 +84,20 @@ namespace workorooms.Controllers
             return CreatedAtAction("GetParticipant", new { id = participant.Id }, participant);
         }
 
+        // POST: api/Participants
+        // Para posteaar la lista entera de participantes
+        [HttpPost]
+        public async Task<ActionResult<IEnumerable<Participant>>> PostParticipants(List<Participant> participants)
+        {
+            foreach (Participant participant in participants)
+            {
+                _context.Participant.Add(participant);
+                await _context.SaveChangesAsync();
+            }
+
+            return Ok();
+        }
+
         // DELETE: api/Participants/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteParticipant(int id)
