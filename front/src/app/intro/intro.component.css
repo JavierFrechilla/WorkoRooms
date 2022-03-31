@@ -1,18 +1,22 @@
 
+
 .container{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    height: 95vh;
+    height: 100vh;
     align-items: center;
     gap: 10%;
 }
 
+.overflow{
+    height: 100vh;
+    overflow: hidden;
+}
+
 .circle{
-    width: 35%;
-    position: absolute;
-    left: 50%;
-    top: 10%;
+    text-align: center;
+    position: fixed;
     z-index: -1;
 }
 
@@ -21,23 +25,22 @@
         -webkit-transform: rotate(0deg);
     }
     to{
-        -webkit-transform: rotate(360deg);
+        -webkit-transform: rotate(-360deg);
     }
 }
 
 .loginButton{
     font-family: "Moderat";
-    background-color: #212222;
-    border: 0.2em solid white;
-    color: white;
+    background-color: white;
+    border: 0.2em solid #212222;
+    color: #212222;
     height: 10%;
     width: 20%;
 }
 
 .loginButton:hover{
-    background-color: white;
-    color: #FB088C;
-    
+    background-color: #212222;
+    color: white;
 }
 
 .registerButton{
@@ -49,8 +52,7 @@
 }
 
 .registerButton:hover{
-    background-color: white;
-    color: #FB088C;
+    background-color: #b91a72;
 }
 
 .rotating {
@@ -62,8 +64,12 @@
         flex-direction: column;
     }
 
-    .loginButton .registerButton{
-        width: 40%;
+    .loginButton{
+        width: 70%;
+    }
+
+    .registerButton{
+        width: 70%;
     }
 }
 
