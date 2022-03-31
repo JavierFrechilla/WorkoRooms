@@ -1,26 +1,24 @@
-<div class="logoContainer">
-    <img src="assets/logo/Logo_Workoholics.svg" alt="logo" routerLink="">
-</div>
+<div class="loginElements">
 
-<div class="form">
+    <img src="/assets/img/login_illustration.svg" alt="placeholder">
+    
+    <div class="form">
 
-    <h4>Nombre</h4>
-    <input type="text" [(ngModel)]="us.name">
+        <h3>Registro</h3>
+        
+        <input placeholder="Nombre" type="text" [(ngModel)]="us.name">
 
-    <h4>Apellido</h4>
-    <input type="text" [(ngModel)]="us.surname">
+        <input placeholder="Apellido" type="text" [(ngModel)]="us.surname">
 
-    <h4>Email</h4>
-    <input type="email" [(ngModel)]="us.gmail">
+        <input placeholder="Correo" type="email" [(ngModel)]="us.gmail">
 
-    <h4>Contraseña</h4>
-    <input type="text" [(ngModel)]="us.password">
+        <input placeholder="Contraseña" type="text" [(ngModel)]="us.password">
 
-    <h4>Rol</h4>
-    <input type="text" [(ngModel)]="us.role">
-    <!-- <h4>Foto</h4>
-    <input class="image" type="file" accept="image/png, image/jpeg" [(ngModel)]="us.photo"> -->
+        <input placeholder="Rol" type="text" [(ngModel)]="us.role">
+        <!-- <h4>Foto</h4>
+        <input class="image" type="file" accept="image/png, image/jpeg" [(ngModel)]="us.photo"> -->
 
-    <button (click)="postUser()" *ngIf="us.password !=''">Registrarse</button>
+        <button (click)="postUser()">Registrarse</button>
 
+    </div>
 </div>

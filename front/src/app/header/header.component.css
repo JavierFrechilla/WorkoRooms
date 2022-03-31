@@ -1,0 +1,10 @@
+.logoContainer{
+    
+    margin: 5vh;
+    cursor: pointer;
+    height: 5%;
+}
+
+.logoContainer img{
+    width: 15em;
+}

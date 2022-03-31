@@ -24,15 +24,11 @@ import { RegisterComponent } from './register/register.component';
 import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
+import { HeaderComponent } from './header/header.component';
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> dev-shiift
 const routes: Routes = [
-
-  {path: 'login', component: LoginComponent},
+ 
+  {path: 'login', component: LoginComponent },
   {path: '', component: IntroComponent},
   {path:'register',component: RegisterComponent},
   {path:'main',component: MainComponent},
@@ -60,6 +56,7 @@ const routes: Routes = [
     NavbarComponent,
     ProfileComponent,
     NotfoundComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
