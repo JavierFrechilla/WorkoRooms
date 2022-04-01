@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Room } from '../room/room';
+import { RoomService } from '../room/room.service';
+import { User } from '../user/user';
+import { UserService } from '../user/user.service';
 import { Booking } from './booking';
 import { BookingService } from './booking.service';
 
@@ -9,7 +13,7 @@ import { BookingService } from './booking.service';
 })
 export class BookingComponent implements OnInit {
 
-  constructor(public service: BookingService) { }
+  constructor(public service: BookingService, public UserService: UserService, public RoomService: RoomService) { }
 
   newBooking: Booking = {
     userId: 0,
@@ -21,8 +25,14 @@ export class BookingComponent implements OnInit {
   };
   booking?: Booking;
   bookings?: Booking[];
+  userOb?:User[];
+  roomOb?:Room[];
+  roomObId?:Room[];
+  id:number=0
   
   ngOnInit(): void {
+    this.getdataUser()
+    this.getdataRoom()
   }
 
   getBookings():void{
@@ -49,4 +59,22 @@ export class BookingComponent implements OnInit {
       this.service.deleteBooking(booking.id).subscribe();
     }
   }
+
+  getdataUser():void{
+    this.UserService.getUsers().subscribe(data=>{this.userOb=data;
+    console.log(this.userOb);
+  })
+  }
+
+  getdataRoom():void{
+    this.RoomService.getRoom().subscribe(data=>{this.roomOb=data;
+    console.log(this.roomOb);
+    })}
+
+  getRoomId(id: number):void{
+  this.RoomService.getRoomId(id).subscribe(data=>{this.roomObId=data;
+    console.log(this.roomObId);
+    })
+}
+
 }
