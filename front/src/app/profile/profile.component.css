@@ -1,0 +1,96 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 120vh;
+}
+
+.logoContainer {
+    padding: 2vh;
+    cursor: pointer;
+    height: 5%;
+}
+
+.logoContainer img {
+    height: 100%;
+}
+
+h3{
+    font-size: 2em;
+    margin: 0;
+}
+
+h4{
+    font-size: 1.5em;
+}
+
+.loginElements{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+img{
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 0;
+}
+
+.image {
+    font-size: 0.8em;
+    align-items: center;
+    text-align: center;
+}
+
+button{
+    margin-top: 10%;
+    background-color: #FB088C;
+    height: 10%;
+    font-family: "Moderat";
+    color: white;
+}
+
+.deleteButton{
+    background-color: #C7C7C7;
+}
+
+
+button:hover{
+    background-color: #b91a72;
+}
+
+.userImage{
+    text-align: center;
+}
+
+
+.profileIcon{
+    
+    align-self: center;
+    background-color: #f3f4f5;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    object-fit:contain;
+    text-align: center;
+}
+
+
+@media(max-width: 767px){
+    .loginElements{
+        flex-direction: column;
+    }
+
+    .form{
+        width: 80%;
+        justify-content: flex-start;
+        margin-top: 2em;
+    }
+
+    input{
+        height: 10%;
+        font-size: 1.2em;
+    }
+}
