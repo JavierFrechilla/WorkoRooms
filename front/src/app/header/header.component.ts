@@ -24,15 +24,24 @@ export class HeaderComponent implements OnInit {
   constructor(public service: UserService) { }
 
   
+
   ngOnInit(): void {
+    if(localStorage.getItem('User') != null && localStorage.getItem('User') != undefined){
+      this.localStorage = localStorage.getItem('User');
+      this.id = parseInt(this.localStorage);
+      this.service.getUser(this.id).subscribe(data =>{
+        this.us = data});
+      console.log(this.us);
+    }
   }
 
-  getUser():void{
-    this.localStorage = localStorage.getItem('User');
-    this.id = parseInt(this.localStorage);
-    this.service.getUser(this.id).subscribe(data =>{
-      this.us = data});
-    console.log(this.us);
+  logOut(): void{
+    localStorage.clear;
   }
+
+  reload(): void{
+    window.location.reload();
+  }
+
 
 }

@@ -3,16 +3,18 @@
     Bienvenido, {{user.name}}</h3>
 <div class="LogOutRight">
 
+    <h3 class="welcome">Bienvenido, {{user.name}}</h3>
+    <a class="logout" href="http://localhost:4200/" (click)="logOut()">Cerrar sesión</a>
     <p class="centerSubtitle">Echa un vistazo a las reservas actuales y gestiona tu tiempo.</p>
-</div>
-<div class="rooms">
-    <div class="map">
-        <img class="mapa" src="../../assets/img/map.svg" alt="">
-    </div>
-</div>
 
-<div class="navBar">
-    <img class="icon" src="assets/img/home.png" alt="" routerLink="/main">
-    <img class="icon" src="assets/img/booking.png" alt="" routerLink="/booking">
-    <img class="icon" src="assets/img/user.png" alt="" routerLink="/profile">
-</div>
+    <div class="rooms">
+        <div class="map">
+            <img class="mapa" src="../../assets/img/map.svg" alt="">
+        </div>
+    </div>
+
+    <div class="navBar">
+        <img class="icon" src="assets/img/home.png" alt="" routerLink="/main">
+        <img class="icon" src="assets/img/booking.png" alt="" routerLink="/booking">
+        <img class="icon" src="assets/img/user.png" alt="" routerLink="/profile">
+    </div>
