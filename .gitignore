@@ -7,7 +7,6 @@ back/bin/*
 back/obj/*
 back/bin/*
 back/obj/Debug/net5.0/workorooms.GeneratedMSBuildEditorConfig.editorconfig
-back/bin/Debug/net5.0/workorooms.dll
 back/bin/Debug/net5.0/workorooms.pdb
 front/.vscode/
 front/.vscode/*

@@ -11,11 +11,14 @@
         <h4>roomId</h4>
         <input type="number" [(ngModel)]="booking.roomId">
         
-        <h4>dateIn</h4>
-        <input type="datetime" [(ngModel)]="booking.dateIn">
+        <h4>date</h4>
+        <input type="date" [(ngModel)]="booking.date">
+
+        <h4>hourIn</h4>
+        <input type="time" [(ngModel)]="booking.hourIn">
         
-        <h4>dateOut</h4>
-        <input type="datetime" [(ngModel)]="booking.dateOut">
+        <h4>hourOut</h4>
+        <input type="time" [(ngModel)]="booking.hourOut">
         
         <button (click)="updateBooking(booking)">Actualizar datos</button>
         <button type="button" class="delete" title="delete loadout" (click)="deleteBooking(booking)">Borrar reunión</button>
@@ -32,11 +35,14 @@
     <h4>roomId</h4>
     <input type="number" [(ngModel)]="newBooking.roomId">
 
+    <h4>date</h4>
+    <input type="date" [(ngModel)]="newBooking.date">
+
     <h4>dateIn</h4>
-    <input type="datetime" [(ngModel)]="newBooking.dateIn">
+    <input type="time" [(ngModel)]="newBooking.hourIn">
 
     <h4>dateOut</h4>
-    <input type="datetime" [(ngModel)]="newBooking.dateOut">
+    <input type="time" [(ngModel)]="newBooking.hourOut">
 
     <button (click)="postBooking()">Crear reunión</button>
 </div>

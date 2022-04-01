@@ -1,13 +1,9 @@
-.form {
+.form{
     display: flex;
     flex-direction: column;
-    width: 40%;
-    margin: auto;
-    margin-bottom: 4em;
-    /* justify-content: center; */
-    text-align: center;
-    height: 80vh;
-    justify-content: center;
+    width: 30%;
+    gap: 2em;
+    height: 100vh;
 }
 
 .logoContainer {
@@ -20,8 +16,22 @@
     height: 100%;
 }
 
-img:hover {
-    background-image: "assets/logo/Logo_Workoholics_pink.svg";
+h3{
+    font-size: 2em;
+    margin: 0;
+}
+
+.loginElements{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+img{
+    max-width: 35%;
 }
 
 .image {
@@ -36,4 +46,9 @@ button{
     height: 10%;
     font-family: "Moderat";
     color: white;
+}
+
+
+button:hover{
+    background-color: #b91a72;
 }
