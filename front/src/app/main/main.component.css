@@ -4,11 +4,26 @@
     height: 5%;
 }
 
+.LogOutRight {
+    display: flex;
+}
+
+.LogOutRight {
+    flex-direction: column-reverse;
+}
+
+.logout {
+    display: flex;
+    color: #fb088c;
+    font-family: 'Moderat';
+    justify-content: flex-end;
+}
+
 .logoContainer img {
     height: 100%;
 }
 
-.centerSubtitle{
+.centerSubtitle {
     display: flex;
     justify-content: center;
 }
@@ -57,20 +72,13 @@
     transform: rotate(90deg);
 }
 
-.logout{
-    color: #fb088c;
-    font-family: 'Moderat';
-}
-
 @media(max-width:767px) {
     .map img {
         transform: rotate(360deg);
     }
-    
 }
 
-
-.navBar{
+.navBar {
     display: flex;
     flex-direction: row;
     gap: 5%;
@@ -81,9 +89,7 @@
     bottom: 0;
 }
 
-
-
-.icon{
+.icon {
     filter: invert(100%);
     height: 2em;
     margin: 1em;
