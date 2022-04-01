@@ -1,3 +1,9 @@
-<div *ngIf="us.id == 0" class="logoContainer">
-    <img src="assets/logo/workorooms_pink.svg" alt="logo" routerLink="/">
+<div *ngIf="us.name == '' else link" class="logoContainer">
+    <a href="http://localhost:4200/"><img src="assets/logo/workorooms_pink.svg"  alt="logo" routerLink="/"></a>
 </div>
+
+<ng-template #link>
+    <div class="logoContainer">
+       <a href="http://localhost:4200/main"><img src="assets/logo/workorooms_pink.svg" alt="logo" ></a>
+    </div>
+</ng-template>
