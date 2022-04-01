@@ -1,3 +1,4 @@
+import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user/user';
 import { UserService } from '../user/user.service';
@@ -12,6 +13,7 @@ export class MainComponent implements OnInit {
   userId: number = -1;
 
   constructor(public userService: UserService) { }
+  
   
   
   user:User ={
