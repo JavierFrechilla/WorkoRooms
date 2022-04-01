@@ -23,8 +23,11 @@
         <input type="text" [(ngModel)]="us.role">
         <!-- <h4>Foto</h4>
         <input class="image" type="file" accept="image/png, image/jpeg" [(ngModel)]="us.photo"> -->
-
+        
         <button (click)="updateUser(us)">Actualizar mi perfil</button>
+        <p *ngIf="refresh == true">Tus datos de perfil han sido actualizados.</p>
+        
+        
 
         
         <button *ngIf="id!=undefined" class="deleteButton" type="button" title="delete loadout" (click)="deleteUser(id)">Eliminar cuenta</button>
