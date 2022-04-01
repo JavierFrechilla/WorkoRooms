@@ -8,3 +8,10 @@
 .logoContainer img{
     width: 15em;
 }
+
+@media(max-width: 767px){
+    .logoContainer{
+    
+        text-align: center;
+    }
+}
