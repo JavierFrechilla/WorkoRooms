@@ -16,8 +16,8 @@ export class BookingComponent implements OnInit {
     purposeId: 0,
     roomId: 0,
     date: new Date(),
-    hourIn: new Date(),
-    hourOut: new Date(),
+    hourIn: '',
+    hourOut: '',
     participants: [],
   };
   booking?: Booking;

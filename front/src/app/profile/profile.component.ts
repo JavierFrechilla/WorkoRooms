@@ -15,6 +15,8 @@ export class ProfileComponent implements OnInit {
   id?: number;
   us?: User;
 
+  refresh: boolean = false;
+
   ngOnInit(): void {
     this.getUser()
   }
@@ -32,6 +34,7 @@ export class ProfileComponent implements OnInit {
       this.us = us
       this.service.updateUser(this.us).subscribe()
       console.log(this.us)
+      this.refresh = true;
     }
   }
 

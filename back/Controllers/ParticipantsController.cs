@@ -86,7 +86,7 @@ namespace workorooms.Controllers
 
         // POST: api/Participants
         // Para posteaar la lista entera de participantes
-        [HttpPost]
+        [HttpPost("addParticipants")]
         public async Task<ActionResult<IEnumerable<Participant>>> PostParticipants(List<Participant> participants)
         {
             foreach (Participant participant in participants)
