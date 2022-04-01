@@ -6,7 +6,7 @@ export interface Booking {
     purposeId: number,
     roomId: number,
     date: Date,
-    hourIn: Date,
-    hourOut: Date,
+    hourIn: any,
+    hourOut: any,
     participants: Participant[],
 }

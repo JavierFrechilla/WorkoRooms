@@ -12,7 +12,7 @@ namespace workorooms.Models
         public int PurposeId { get; set; }
         public int RoomId { get; set; }
         public DateTime Date { get; set; }
-        public DateTime HourIn { get; set; }
+        public int Hour { get; }
         public DateTime HourOut { get; set; }
         public User User { get; set; }
         public Purpose Purpose { get; set; }
