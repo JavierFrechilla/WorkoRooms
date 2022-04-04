@@ -25,6 +25,7 @@ import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
+import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
  
@@ -57,6 +58,7 @@ const routes: Routes = [
     ProfileComponent,
     NotfoundComponent,
     HeaderComponent,
+    MapComponent,
   ],
   imports: [
     BrowserModule,

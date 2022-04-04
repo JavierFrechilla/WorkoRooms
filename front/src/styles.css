@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
 @font-face {
     font-family: "Moderat";
     src: local("Moderat"), url(src/assets/fonts/Moderat_Extended_Bold.otf) format("opentype");
