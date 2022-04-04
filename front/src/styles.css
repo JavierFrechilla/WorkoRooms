@@ -7,10 +7,12 @@
     src: local("Moderat"), url(src/assets/fonts/Moderat_Extended_Bold.otf) format("opentype");
 }
 
-html, body {
+html,
+body {
     min-height: 100vh;
     margin: 0;
 }
+
 
 /* @keyframes slideInLeft {
     100% {
@@ -23,32 +25,26 @@ html, body {
     }
   } */
 
-  .background{
-      z-index: 2;
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      animation: 3s ease-in-out 0s 1 slideInLeft;
-      
-  }
+.background {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    animation: 3s ease-in-out 0s 1 slideInLeft;
+}
 
 body {
     font-family: "DM Sans", sans-serif;
 }
 
-
-
-
-button{
+button {
     border: none;
     cursor: pointer;
     font-size: 100%;
     border-radius: 0.8em;
 }
 
-
-
-.pinkButton{
+.pinkButton {
     font-family: "Moderat";
     background-color: #FB088C;
     color: white;
@@ -56,11 +52,11 @@ button{
     width: 20%;
 }
 
-.pinkButton:hover{
+.pinkButton:hover {
     background-color: #b91a72;
 }
 
-.greyButton{
+.greyButton {
     font-family: "Moderat";
     background-color: white;
     border: 0.2em solid #c7c7c7;
@@ -69,21 +65,40 @@ button{
     width: 20%;
 }
 
-.greyButton:hover{
+.greyButton:hover {
     background-color: #c7c7c7;
     color: white;
 }
 
-input{
+input {
     border-right: none;
     border-left: none;
     border-top: none;
     border-width: 0.2em;
     border-color: black;
-   background-color: white;
-   height: 5%;
+    background-color: white;
+    height: 5%;
 }
 
-input:focus{
-  outline: none;  
+input:focus {
+    outline: none;
 }
+
+.fc {
+    width: 80%;
+    margin: auto;
+}
+
+.fc-toolbar h2 {
+    font-size: 2em !important;
+    margin: 0;
+    color: #FB088C;
+    font-family: "Moderat";
+}
+
+
+/* .fc-event,
+.fc-event-dot {
+    background-color: #FB088C !important;
+    border: none !important;
+} */

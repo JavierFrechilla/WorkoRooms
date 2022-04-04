@@ -1,20 +1,25 @@
 <div class="loginElements">
 
     <img src="/assets/img/login_illustration.svg" alt="placeholder">
-    
+
     <div class="form">
 
         <h3>Registro</h3>
-        
+
         <input placeholder="Nombre" type="text" [(ngModel)]="us.name">
 
         <input placeholder="Apellido" type="text" [(ngModel)]="us.surname">
 
+        <input placeholder="Photo" type="url" [(ngModel)]="us.photo">
+
         <input placeholder="Correo" type="email" [(ngModel)]="us.gmail">
+
 
         <input placeholder="Contraseña" type="text" [(ngModel)]="us.password">
 
         <input placeholder="Rol" type="text" [(ngModel)]="us.role">
+
+
         <!-- <h4>Foto</h4>
         <input class="image" type="file" accept="image/png, image/jpeg" [(ngModel)]="us.photo"> -->
 

@@ -4,6 +4,21 @@
     height: 5%;
 }
 
+.LogOutRight {
+    display: flex;
+}
+
+.LogOutRight {
+    flex-direction: column-reverse;
+}
+
+.logout {
+    display: flex;
+    color: #fb088c;
+    font-family: 'Moderat';
+    justify-content: flex-end;
+}
+
 .logoContainer img {
     height: 100%;
 }

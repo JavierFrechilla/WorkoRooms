@@ -11,6 +11,5 @@ namespace workorooms.Models
         public bool State { get; set; }
         public string Color { get; set; }
         public List<Booking> Bookings { get; set; }
-        public List<Resource> Resources { get; set; }
     }
 }

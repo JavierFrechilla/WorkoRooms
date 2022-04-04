@@ -22,8 +22,6 @@ namespace workorooms.Data
 
         public DbSet<workorooms.Models.Purpose> Purpose { get; set; }
 
-        public DbSet<workorooms.Models.Resource> Resource { get; set; }
-
         public DbSet<workorooms.Models.Room> Room { get; set; }
 
         public DbSet<workorooms.Models.User> User { get; set; }

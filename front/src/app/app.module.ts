@@ -1,3 +1,4 @@
+import { MbscModule } from '@mobiscroll/angular';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -25,6 +26,8 @@ import { MainComponent } from './main/main.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import {FullCalendarModule} from 'primeng/fullcalendar'
 import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
@@ -35,13 +38,14 @@ const routes: Routes = [
   {path:'main',component: MainComponent},
   {path:'user',component: UserComponent},
   {path:'profile',component: ProfileComponent},
-  {path: 'main/booking', component:BookingComponent},
+  {path: 'booking', component:BookingComponent},
+  {path:'calendar',component:CalendarComponent},
   {path: '**', component: NotfoundComponent},
 
 ]
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     RoomComponent,
     UserComponent,
@@ -58,8 +62,9 @@ const routes: Routes = [
     ProfileComponent,
     NotfoundComponent,
     HeaderComponent,
-    MapComponent,
-  ],
+      CalendarComponent,
+     
+   ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -67,7 +72,10 @@ const routes: Routes = [
     BrowserAnimationsModule,
     MatButtonModule,
     MatSliderModule,
+    FullCalendarModule,
     RouterModule.forRoot(routes),
+    MbscModule, 
+    MapComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
