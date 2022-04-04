@@ -1,0 +1,118 @@
+/* map */
+.map svg {
+    display: flex;
+    height: 100vh;
+    margin: auto;
+    /* transform: rotate(90deg); */
+}
+
+.hideThis {
+    color: transparent;
+    user-select: none;
+}
+
+.st0 {
+    opacity: 0.1;
+    fill: #FFCD04;
+    enable-background: new;
+}
+
+.st0:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.st1 {
+    opacity: 0.2;
+    fill: #60CCFA;
+    enable-background: new;
+}
+
+.st1:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.st2 {
+    opacity: 0.2;
+    fill: #39B54A;
+    enable-background: new;
+}
+
+.st2:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.st3 {
+    opacity: 0.2;
+    fill: #FB088C;
+    enable-background: new;
+}
+
+.st3:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.st4 {
+    fill: #F3F4F5;
+    filter: url(#Adobe_OpacityMaskFilter);
+}
+
+.st5 {
+    mask: url(#mask0_1_809_1_);
+}
+
+.st6 {
+    opacity: 0.1;
+    enable-background: new;
+}
+
+.st7 {
+    fill: #212222;
+}
+
+.st8 {
+    fill: #212222;
+    filter: url(#Adobe_OpacityMaskFilter_1_);
+}
+
+.st9 {
+    mask: url(#mask1_1_809_1_);
+}
+
+.st10 {
+    fill: none;
+    stroke: #212222;
+    stroke-width: 3;
+}
+
+.st11 {
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+    fill: #FFFFFF;
+    stroke: #212222;
+    stroke-width: 3;
+}
+
+.st12 {
+    fill: #FFFFFF;
+    stroke: #212222;
+    stroke-width: 3;
+}
+
+.st13 {
+    fill: #FFFFFF;
+}
+
+.st14 {
+    fill: #FFFFFF;
+    fill-opacity: 0.8;
+}
+
+.st15 {
+    opacity: 0.2;
+    fill: #808080;
+    enable-background: new;
+}

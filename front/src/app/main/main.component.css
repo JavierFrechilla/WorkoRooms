@@ -63,20 +63,87 @@
 
 .rooms {
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 2em;
+    margin-right: 2em;
+    height: auto;
 }
 
-.map img {
+.bookings {
     display: flex;
-    height: 70vh;
-    transform: rotate(90deg);
+    flex-direction: column;
+    width: 40%;
+    margin-top: 1em;
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    min-height: 5em;
+    background-color: #F7CDE8;
+    color: #fb088c;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.cardGreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    min-height: 5em;
+    background-color: #D3EFDA;
+    color: #53B64B;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.cardImageContainer{
+    display: flex;
+    align-content: center;
+    margin-right: 1em;
+}
+
+.cardImageContainer img{
+   width: 10%;
+   height: auto;
+   margin-left: auto;
+   max-width: 70%;
+}
+
+h3 {
+    margin: 0;
+    font-weight: 700;
+}
+
+p{
+    font-weight: 400;
+    margin: 0.3em;
+    opacity: 0.5;
+}
+
+
+.logout {
+    color: #fb088c;
+    font-family: 'Moderat';
 }
 
 @media(max-width:767px) {
     .map img {
         transform: rotate(360deg);
     }
+
+    .rooms {
+        flex-direction: row;
+    }
+
 }
+
 
 .navBar {
     display: flex;
@@ -88,6 +155,8 @@
     width: 100vw;
     bottom: 0;
 }
+
+
 
 .icon {
     filter: invert(100%);
