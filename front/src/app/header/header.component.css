@@ -1,12 +1,30 @@
 .logoContainer{
-    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 5vh;
-    cursor: pointer;
     height: 5%;
+    align-items: center;
 }
 
-.logoContainer img{
-    width: 15em;
+
+.logo{
+    max-height: 20%;
+    width: 20%;
+    cursor: pointer;
+}
+
+.profileImage{
+    width: 3em;
+    cursor: pointer;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+    cursor: pointer;
 }
 
 @media(max-width: 767px){

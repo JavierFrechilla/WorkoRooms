@@ -15,7 +15,7 @@ export class RoomService {
   }
 
   getRoomId(id:number): Observable<Room>{
-    return this.http.get<Room>('https://localhost:44377/api/Rooms/' + id)
+    return this.http.get<Room>('https://localhost:44377/api/Rooms/Booking' + id)
   }
 
   getRoomsId(id:number): Observable<Room[]>{
