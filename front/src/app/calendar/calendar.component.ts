@@ -3,14 +3,8 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import timeGridPlugin from '@fullcalendar/timegrid';
 import interactionPlugin from '@fullcalendar/interaction';
 import esLocale from '@fullcalendar/core/locales/es'
-<<<<<<< HEAD
-import { style } from '@angular/animations';
-import { BubbleController } from 'chart.js';
-import { reduce } from 'rxjs';
-=======
 import { BookingService } from '../booking/booking.service';
 import { Booking } from '../booking/booking';
->>>>>>> dev-javi
 
 @Component({
   selector: 'app-calendar',
