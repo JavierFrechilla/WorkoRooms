@@ -86,12 +86,6 @@ export class BookingComponent implements OnInit {
     })
   }
 
-  getRoomId(id: number):void{
-  this.RoomService.getRoomId(id).subscribe(data=>{this.roomObId=data;
-    console.log(this.roomObId);
-    })
-  }
-
   getdataPurpose():void{
     this.PurposeService.getPurpose().subscribe(data=>{this.purposeOb=data;
     console.log(this.purposeOb);
