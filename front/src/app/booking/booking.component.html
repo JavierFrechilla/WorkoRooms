@@ -10,7 +10,6 @@
    {{dato.name}} {{dato.surname}} 
 </option>
 </select>
-
         <h4>purposeId</h4>
         <input type="number" [(ngModel)]="booking.purposeId">
 
@@ -24,65 +23,33 @@
         <input type="datetime-local" [(ngModel)]="booking.dateOut">
 
         <button (click)="updateBooking(booking)">Actualizar datos</button>
-        <button type="button" class="delete" title="delete loadout" (click)="deleteBooking(booking)">Borrar reunión</button>
+        <button type="button" class="delete" title="delete booking" (click)="deleteBooking(booking)">Borrar reunión</button>
 
     </div>
 </div>
 <div>
-    <!-- <form>
-        <label>Selecciona un usuario: </label>
-        <input type="checkbox" id="listCenTra" [(ngModel)]="newBooking.userId">
-        <option value="{{dato.id}}" *ngFor="let dato of userOb">
-            {{dato.name}} {{dato.surname}}
-        </option>
-    </form> -->
-
-    <form *ngFor="let dato of userOb">
-        <label><input type="checkbox">{{dato.name}}</label>
-    </form>
-
-    <form [(ngModel)]="newBooking.roomId">
-        <label *ngFor="let dato of roomOb" for="enum_answer_{{dato.name}}">
-            <input id="enum_answer_{{dato.name}}" [value]='dato.name' type="radio" name="enums">
-            {{dato.name}}
+    <form>
+        <label *ngFor="let room of roomOb">
+            <input type="radio" [(ngModel)]="newBooking.roomId" [value]='room.id' name="enums">{{room.name}}
         </label>
     </form>
 
-
-
-
-
-
-    <!-- <label>Selecciona una sala: </label>
-    <select id="listCenTra" [(ngModel)]="newBooking.roomId">
-<option value="{{dato.id}}" *ngFor="let dato of roomOb">
-{{dato.name}} 
-</option>
-</select>
-
-
-    <label>Selecciona una sala: </label>
-    <select id="listCenTra" [(ngModel)]="newBooking.roomId">
-<option value="{{dato.id}}" *ngFor="let dato of roomOb">
-{{dato.name}} 
-</option>
-</select> -->
-
-
-    <h4>userId</h4>
-    <input type="number" [(ngModel)]="newBooking.userId">
-
-    <h4>purposeId</h4>
-    <input type="number" [(ngModel)]="newBooking.purposeId">
-
-    <!-- <h4>roomId</h4>
-    <input type="number" [(ngModel)]="newBooking.roomId"> -->
+    <h4>Purpose</h4>
+    <select [(ngModel)]="newBooking.purposeId">
+        <option *ngFor="let purpose of purposeOb" [value]='purpose.id'>{{purpose.name}}</option>
+    </select>
 
     <h4>dateIn</h4>
     <input type="datetime-local" [(ngModel)]="newBooking.dateIn">
 
     <h4>dateOut</h4>
     <input type="datetime-local" [(ngModel)]="newBooking.dateOut">
-
+    
+    <form>
+        <label *ngFor="let user of userOb">
+            <input [value]='user' type="checkbox" name="enums2">{{user.name}}
+        </label>
+    </form>
+ <!--  [(ngModel)]="participants"-->
     <button (click)="postBooking()">Crear reunión</button>
 </div>

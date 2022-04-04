@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ParticipantService } from '../participant/participant.service';
+import { Participant } from '../participant/participant';
+import { Purpose } from '../purpose/purpose';
+import { PurposeService } from '../purpose/purpose.service';
 import { Room } from '../room/room';
 import { RoomService } from '../room/room.service';
 import { User } from '../user/user';
@@ -13,7 +17,7 @@ import { BookingService } from './booking.service';
 })
 export class BookingComponent implements OnInit {
 
-  constructor(public service: BookingService, public UserService: UserService, public RoomService: RoomService) { }
+  constructor(public service: BookingService, public UserService: UserService, public RoomService: RoomService, public PurposeService: PurposeService, public ParticipantService: ParticipantService) { }
 
   newBooking: Booking = {
     userId: 0,
@@ -23,16 +27,24 @@ export class BookingComponent implements OnInit {
     dateOut: new Date(),
     participants: [],
   };
+  participants?: Participant[];
   booking?: Booking;
   bookings?: Booking[];
-  userOb?:User[];
-  roomOb?:Room[];
-  roomObId?:Room[];
-  id:number=0
+  userOb?: User[];
+  roomOb?: Room[];
+  purposeOb?: Purpose[];
+  roomObId?: Room[];
+  id: number = 0;
+  userId: number = 0;
   
   ngOnInit(): void {
     this.getdataUser()
     this.getdataRoom()
+    this.getdataPurpose()
+    if(localStorage.getItem("User")){
+      this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
+      console.log(this.userId)
+    }
   }
 
   getBookings():void{
@@ -42,6 +54,8 @@ export class BookingComponent implements OnInit {
   }
 
   postBooking():void{
+    console.log(this.participants)
+    this.newBooking.userId = this.userId;
     this.service.postBooking(this.newBooking).subscribe()
   }
 
@@ -69,12 +83,18 @@ export class BookingComponent implements OnInit {
   getdataRoom():void{
     this.RoomService.getRoom().subscribe(data=>{this.roomOb=data;
     console.log(this.roomOb);
-    })}
-
-  getRoomId(id: number):void{
-  this.RoomService.getRoomId(id).subscribe(data=>{this.roomObId=data;
-    console.log(this.roomObId);
     })
-}
+  }
 
+  getdataPurpose():void{
+    this.PurposeService.getPurpose().subscribe(data=>{this.purposeOb=data;
+    console.log(this.purposeOb);
+    })
+  }
+
+  postParticipants():void{
+    if(this.participants != undefined){
+      this.ParticipantService.postParticipants(this.participants).subscribe()
+    }
+  }
 }
