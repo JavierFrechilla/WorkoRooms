@@ -87,8 +87,16 @@ input:focus {
     margin: auto;
 }
 
-.fc-event,
+.fc-toolbar h2 {
+    font-size: 2em !important;
+    margin: 0;
+    color: #FB088C;
+    font-family: "Moderat";
+}
+
+
+/* .fc-event,
 .fc-event-dot {
     background-color: #FB088C !important;
     border: none !important;
-}
+} */
