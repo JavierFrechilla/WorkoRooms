@@ -14,7 +14,11 @@ export class RoomService {
     return this.http.get<Room[]>('https://localhost:44377/api/Rooms')
   }
 
-  getRoomId(id:number): Observable<Room[]>{
+  getRoomId(id:number): Observable<Room>{
+    return this.http.get<Room>('https://localhost:44377/api/Rooms/' + id)
+  }
+
+  getRoomsId(id:number): Observable<Room[]>{
     return this.http.get<Room[]>('https://localhost:44377/api/Rooms/' + id)
   }
 }
