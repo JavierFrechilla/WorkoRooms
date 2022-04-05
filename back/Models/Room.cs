@@ -10,6 +10,6 @@ namespace workorooms.Models
         public int Capacity { get; set; }
         public bool State { get; set; }
         public string Color { get; set; }
-        public List<Booking> Bookings { get; set; }
+        //public List<Booking> Bookings { get; set; }
     }
 }

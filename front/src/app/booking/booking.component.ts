@@ -9,6 +9,7 @@ import { User } from '../user/user';
 import { UserService } from '../user/user.service';
 import { Booking } from './booking';
 import { BookingService } from './booking.service';
+import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-booking',
@@ -26,6 +27,7 @@ export class BookingComponent implements OnInit {
     dateIn: new Date(),
     dateOut: new Date(),
     participants: [],
+    
   };
   participants?: Participant[];
   booking?: Booking;
@@ -36,6 +38,7 @@ export class BookingComponent implements OnInit {
   roomObId?: Room[];
   id: number = 0;
   userId: number = 0;
+ 
   
   ngOnInit(): void {
     this.getdataUser()

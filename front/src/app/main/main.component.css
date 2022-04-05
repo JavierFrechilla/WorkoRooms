@@ -84,8 +84,8 @@
     align-items: center;
     margin-top: 1em;
     min-height: 5em;
-    background-color: #F7CDE8;
-    color: #fb088c;
+    /* background-color: #F7CDE8; */
+    color: #060606;
     border-radius: 1em;
     padding: 1em;
 }
