@@ -2,7 +2,8 @@
 <p class="centerSubtitle">Echa un vistazo a las reservas actuales y gestiona tu tiempo.</p>
 
 <div class="rooms">
-	<app-map></app-map>
+	<!-- <p-fullCalendar class="calendar" [events]="events" [options]="options"></p-fullCalendar> -->
+
 	<div class="bookings">
 		<div class="card">
 			<div>
@@ -17,6 +18,7 @@
 				<img  src="{{user.photo}}" alt="userimage">
 			</div>
 		</div>
+		
 		<div class="cardGreen">
 			<div>
 				<h3>Zona de trabajo</h3>
@@ -29,17 +31,9 @@
 				<img  src="{{user.photo}}" alt="userimage">
 			</div>
 		</div>
-		<div class="card">
-			<div>
-				<h3>Reunión</h3>
-				<p>8:30 - 10:30</p>
-				<p>workspace2</p>
-			</div>
-			<div class="cardImageContainer">
-				<img  src="{{user.photo}}" alt="userimage">
-			</div>
-		</div>
 	</div>
+
+	<app-map></app-map>
 
 </div>
 

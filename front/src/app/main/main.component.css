@@ -75,6 +75,7 @@
     flex-direction: column;
     width: 40%;
     margin-top: 1em;
+    overflow-y: scroll;
 }
 
 .card {
@@ -103,17 +104,17 @@
     padding: 1em;
 }
 
-.cardImageContainer{
+.cardImageContainer {
     display: flex;
     align-content: center;
     margin-right: 1em;
 }
 
-.cardImageContainer img{
-   width: 10%;
-   height: auto;
-   margin-left: auto;
-   max-width: 70%;
+.cardImageContainer img {
+    width: 10%;
+    height: auto;
+    margin-left: auto;
+    max-width: 70%;
 }
 
 h3 {
@@ -121,7 +122,7 @@ h3 {
     font-weight: 700;
 }
 
-p{
+p {
     font-weight: 400;
     margin: 0.3em;
     opacity: 0.5;

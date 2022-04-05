@@ -36,6 +36,10 @@ export class BookingComponent implements OnInit {
   roomObId?: Room[];
   id: number = 0;
   userId: number = 0;
+
+  highLightV: number = -1
+
+  
   
   ngOnInit(): void {
     this.getdataUser()
@@ -97,4 +101,10 @@ export class BookingComponent implements OnInit {
       this.ParticipantService.postParticipants(this.participants).subscribe()
     }
   }
+
+  highLight(): void{
+    // console.log(this.highLightV)
+    this.newBooking.id = this.highLightV
+  }
+
 }

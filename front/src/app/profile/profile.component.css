@@ -77,6 +77,17 @@ button:hover{
     text-align: center;
 }
 
+.logOut{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+    color:#FB088C;
+    cursor: pointer;
+}
+
 
 @media(max-width: 767px){
     .loginElements{

@@ -62,9 +62,10 @@ const routes: Routes = [
     ProfileComponent,
     NotfoundComponent,
     HeaderComponent,
-      CalendarComponent,
-     
+    CalendarComponent,
+    MapComponent,
    ],
+
   imports: [
     BrowserModule,
     FormsModule,
@@ -75,7 +76,6 @@ const routes: Routes = [
     FullCalendarModule,
     RouterModule.forRoot(routes),
     MbscModule, 
-    MapComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
