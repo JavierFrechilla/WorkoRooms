@@ -29,6 +29,7 @@ import { HeaderComponent } from './header/header.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import {FullCalendarModule} from 'primeng/fullcalendar'
 import { MapComponent } from './map/map.component';
+import { DtocalendarComponent } from './dtocalendar/dtocalendar.component';
 
 const routes: Routes = [
  
@@ -62,9 +63,8 @@ const routes: Routes = [
     ProfileComponent,
     NotfoundComponent,
     HeaderComponent,
-      CalendarComponent,
-      MapComponent,
-     
+    CalendarComponent, 
+    MapComponent 
    ],
   imports: [
     BrowserModule,
@@ -76,7 +76,10 @@ const routes: Routes = [
     FullCalendarModule,
     RouterModule.forRoot(routes),
     MbscModule, 
+<<<<<<< HEAD
+=======
     
+>>>>>>> dev-guillermo-final
   ],
   providers: [],
   bootstrap: [AppComponent],
