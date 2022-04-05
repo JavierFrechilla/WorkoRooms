@@ -66,8 +66,7 @@
     flex-direction: row;
     justify-content: space-around;
     margin-left: 2em;
-    margin-right: 2em;
-    height: auto;
+    margin-right: 2
 }
 
 .bookings {
@@ -85,8 +84,8 @@
     align-items: center;
     margin-top: 1em;
     min-height: 5em;
-    background-color: #F7CDE8;
-    color: #fb088c;
+    /* background-color: #F7CDE8; */
+    color: #060606;
     border-radius: 1em;
     padding: 1em;
 }
@@ -125,9 +124,8 @@ h3 {
 p {
     font-weight: 400;
     margin: 0.3em;
-    opacity: 0.5;
+    opacity: 0.8;
 }
-
 
 .logout {
     color: #fb088c;
@@ -138,13 +136,10 @@ p {
     .map img {
         transform: rotate(360deg);
     }
-
     .rooms {
         flex-direction: row;
     }
-
 }
-
 
 .navBar {
     display: flex;
@@ -156,8 +151,6 @@ p {
     width: 100vw;
     bottom: 0;
 }
-
-
 
 .icon {
     filter: invert(100%);

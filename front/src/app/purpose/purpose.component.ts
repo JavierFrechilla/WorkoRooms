@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Purpose } from './purpose';
+import { PurposeService } from './purpose.service';
 
 @Component({
   selector: 'app-purpose',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PurposeComponent implements OnInit {
 
-  constructor() { }
+  objetosPu?: Purpose[]
+
+  constructor(public purposeService:PurposeService) { }
 
   ngOnInit(): void {
+  }
+  getdataPurpose():void{
+    this.purposeService.getPurpose().subscribe(data=>{this.objetosPu=data;
+    console.log(this.objetosPu);
+  })
   }
 
 }

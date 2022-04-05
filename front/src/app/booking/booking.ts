@@ -1,4 +1,5 @@
 import { Participant } from "../participant/participant";
+import { Purpose } from "../purpose/purpose";
 import { Room } from "../room/room";
 
 export interface Booking {
@@ -9,5 +10,6 @@ export interface Booking {
     dateIn: Date,
     dateOut: Date,
     participants: Participant[],
-    room?: Room
+    purpose?:Purpose
+    room?:Room
 }
