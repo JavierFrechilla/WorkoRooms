@@ -76,13 +76,7 @@ const routes: Routes = [
     MatSliderModule,
     FullCalendarModule,
     RouterModule.forRoot(routes),
-<<<<<<< HEAD
-    MbscModule, 
-    
-
-=======
     MbscModule
->>>>>>> origin/dev
   ],
   providers: [],
   bootstrap: [AppComponent],
