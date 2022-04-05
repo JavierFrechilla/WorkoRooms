@@ -2,49 +2,19 @@
 <p class="centerSubtitle">Echa un vistazo a las reservas actuales y gestiona tu tiempo.</p>
 
 <div class="rooms">
-	<app-map></app-map>
-	<div class="bookings">
-		<div class="card">
-			<div>
-				<h3>Reunión</h3>
-				<p>8:30 - 10:30</p>
-				<p>workspace2</p>
-			</div>
-			<div class="cardImageContainer">
-				<img  src="{{user.photo}}" alt="userimage">
-				<img  src="{{user.photo}}" alt="userimage">
-				<img  src="{{user.photo}}" alt="userimage">
-				<img  src="{{user.photo}}" alt="userimage">
-			</div>
-		</div>
-		<div class="cardGreen">
-			<div>
-				<h3>Zona de trabajo</h3>
-				<p>12:30 - 13:00</p>
-				<p>workspace1</p>
-			</div>
-			<div class="cardImageContainer">
-				<img  src="{{user.photo}}" alt="userimage">
-				<img  src="{{user.photo}}" alt="userimage">
-				<img  src="{{user.photo}}" alt="userimage">
-			</div>
-		</div>
-		<div class="card">
-			<div>
-				<h3>Reunión</h3>
-				<p>8:30 - 10:30</p>
-				<p>workspace2</p>
-			</div>
-			<div class="cardImageContainer">
-				<img  src="{{user.photo}}" alt="userimage">
-			</div>
-		</div>
-	</div>
+    <app-map></app-map>
+    <div class="bookings">
+        <div class="card" *ngFor="let booking of bookings" style="background-color: {{booking.room.color}}">
+            <div>
+                <h3>{{booking.purpose.name}}</h3>
+                <p><b> {{booking.dateIn| date:'dd-MM-yyyy HH:mm'}}</b></p>
+                <p><b> {{booking.dateOut| date:'dd-MM-yyyy HH:mm'}}</b> </p>
+                <p>{{booking.room.name}}</p>
 
-</div>
 
-<!-- <div class="navBar">
-	<img class="icon" src="assets/img/home.png" alt="" routerLink="/main">
-	<img class="icon" src="assets/img/booking.png" alt="" routerLink="/booking">
-	<img class="icon" src="assets/img/user.png" alt="" routerLink="/profile">
-</div> -->
+            </div>
+
+        </div>
+
+
+    </div>

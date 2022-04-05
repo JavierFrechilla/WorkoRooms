@@ -44,12 +44,12 @@
 
     <h4>dateOut</h4>
     <input type="datetime-local" [(ngModel)]="newBooking.dateOut">
-    
+
     <form>
         <label *ngFor="let user of userOb">
             <input [value]='user' type="checkbox" name="enums2">{{user.name}}
         </label>
     </form>
- <!--  [(ngModel)]="participants"-->
+    <!--  [(ngModel)]="participants"-->
     <button (click)="postBooking()">Crear reunión</button>
 </div>

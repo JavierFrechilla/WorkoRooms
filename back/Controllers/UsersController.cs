@@ -58,10 +58,10 @@ namespace workorooms.Controllers
         }
         
         // GET Booking del User logueado
-        [HttpGet("Booking/{userId}")]
-        public async Task<ActionResult<IEnumerable<Booking>>> GetBooking(int userId)
+        [HttpGet("booking/{bookingId}")]
+        public async Task<ActionResult<IEnumerable<Booking>>> GetBooking(int bookingId)
         {
-            var booking = await _context.Booking.Where(b => b.UserId == userId).ToListAsync();
+            var booking = await _context.Booking.Where(b => b.UserId == bookingId).ToListAsync();
 
             if (booking == null)
             {
