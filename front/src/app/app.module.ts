@@ -66,6 +66,7 @@ const routes: Routes = [
     CalendarComponent, 
     MapComponent 
    ],
+
   imports: [
     BrowserModule,
     FormsModule,
@@ -75,7 +76,7 @@ const routes: Routes = [
     MatSliderModule,
     FullCalendarModule,
     RouterModule.forRoot(routes),
-    MbscModule, 
+    MbscModule
   ],
   providers: [],
   bootstrap: [AppComponent],

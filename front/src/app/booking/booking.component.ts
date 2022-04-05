@@ -39,7 +39,7 @@ export class BookingComponent implements OnInit {
   id: number = 0;
   userId: number = 0;
   today = new Date().toISOString().split('T')[0];
- 
+  highLightV: number = -1
   
   ngOnInit(): void {
     this.getdataUser()
@@ -106,4 +106,10 @@ export class BookingComponent implements OnInit {
   disableDates():void{
     document.getElementsByName('book')[0].setAttribute('min', this.today);
   }
+
+  highLight(): void{
+    // console.log(this.highLightV)
+    this.newBooking.id = this.highLightV
+  }
+
 }

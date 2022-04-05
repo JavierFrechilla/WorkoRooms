@@ -33,6 +33,13 @@ export class CalendarComponent implements OnInit {
         left: 'prev,next',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
+<<<<<<< HEAD
+=======
+
+      },
+      editable: true
+      
+>>>>>>> dev-shiift
 
       },
       editable: false,

@@ -1,3 +1,33 @@
 input {
     height: auto;
 }
+
+h2{
+    font-size: 2em;
+}
+
+.radioInput{
+    font-size: 1.5em;
+}
+
+
+
+.bookingContainer{
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+    justify-content: space-between;
+}
+
+.width{
+    width: 30%;
+}
+
+.map{
+    position: relative;
+}
+
+.pinkButton{
+    margin-top: 2em;
+    width: 15em;
+}
