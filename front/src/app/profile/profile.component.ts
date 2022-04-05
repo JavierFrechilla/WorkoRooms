@@ -43,4 +43,9 @@ export class ProfileComponent implements OnInit {
       this.service.deleteUser(id).subscribe();
     }
   }
+
+  logOut(): void {
+    localStorage.clear();
+    location.href = "/"
+  }
 }

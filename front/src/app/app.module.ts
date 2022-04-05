@@ -63,9 +63,15 @@ const routes: Routes = [
     ProfileComponent,
     NotfoundComponent,
     HeaderComponent,
+<<<<<<< HEAD
     CalendarComponent, 
     MapComponent 
+=======
+    CalendarComponent,
+    MapComponent,
+>>>>>>> dev-shiift
    ],
+
   imports: [
     BrowserModule,
     FormsModule,
@@ -77,9 +83,12 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     MbscModule, 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     
 >>>>>>> dev-guillermo-final
+=======
+>>>>>>> dev-shiift
   ],
   providers: [],
   bootstrap: [AppComponent],
