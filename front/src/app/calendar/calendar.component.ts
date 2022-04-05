@@ -33,7 +33,6 @@ export class CalendarComponent implements OnInit {
         left: 'prev,next',
         center: 'title',
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
-
       },
       editable: false,
     }

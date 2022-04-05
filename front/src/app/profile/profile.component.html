@@ -1,5 +1,9 @@
+<div class="logOut">
+<a (click)="logOut()">Cerrar sesión</a>
+</div>
 <div *ngIf="us != undefined " class="loginElements">
     
+
     <div class="profileIcon">
         <img  src="{{us.photo}}" alt="userimage">
     </div>
@@ -26,6 +30,7 @@
         
         <button (click)="updateUser(us)">Actualizar mi perfil</button>
         <p *ngIf="refresh == true">Tus datos de perfil han sido actualizados.</p>
+        
         
         
 
