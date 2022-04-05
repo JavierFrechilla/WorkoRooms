@@ -29,6 +29,7 @@ import { HeaderComponent } from './header/header.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import {FullCalendarModule} from 'primeng/fullcalendar'
 import { MapComponent } from './map/map.component';
+import { DtocalendarComponent } from './dtocalendar/dtocalendar.component';
 
 const routes: Routes = [
  
@@ -62,13 +63,9 @@ const routes: Routes = [
     ProfileComponent,
     NotfoundComponent,
     HeaderComponent,
-      CalendarComponent,
-     
+    CalendarComponent, 
+    MapComponent 
    ],
-  imports: [ 
-    MbscModule, 
-    MapComponent,
-  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -78,6 +75,7 @@ const routes: Routes = [
     MatSliderModule,
     FullCalendarModule,
     RouterModule.forRoot(routes),
+    MbscModule, 
   ],
   providers: [],
   bootstrap: [AppComponent],
