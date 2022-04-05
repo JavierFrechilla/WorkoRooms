@@ -36,6 +36,8 @@ namespace workorooms.Controllers
                 c.UserName = u.Name;
                 c.PurposeName = p.Name;
                 c.RoomColor = r.Color;
+                c.DateIn = b.DateIn;
+                c.DateOut = b.DateOut;
 
                 calendars.Add(c);
 
