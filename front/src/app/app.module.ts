@@ -76,10 +76,6 @@ const routes: Routes = [
     FullCalendarModule,
     RouterModule.forRoot(routes),
     MbscModule, 
-<<<<<<< HEAD
-=======
-    
->>>>>>> dev-guillermo-final
   ],
   providers: [],
   bootstrap: [AppComponent],
