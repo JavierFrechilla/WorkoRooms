@@ -28,6 +28,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { HeaderComponent } from './header/header.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import {FullCalendarModule} from 'primeng/fullcalendar'
+import { MapComponent } from './map/map.component';
+
 const routes: Routes = [
  
   {path: 'login', component: LoginComponent },
@@ -62,9 +64,10 @@ const routes: Routes = [
     HeaderComponent,
       CalendarComponent,
      
-   ],
-  imports: [ 
-    MbscModule, 
+
+  
+  ],
+  imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
@@ -73,6 +76,8 @@ const routes: Routes = [
     MatSliderModule,
     FullCalendarModule,
     RouterModule.forRoot(routes),
+    MbscModule, 
+    MapComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],
