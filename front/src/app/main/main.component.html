@@ -1,10 +1,9 @@
 <h3 class="welcome">Bienvenido, {{user.name}}</h3>
-<p class="centerSubtitle">Echa un vistazo a las reservas actuales y gestiona tu tiempo.</p>
+<!-- <p class="centerSubtitle">Echa un vistazo a las reservas actuales y gestiona tu tiempo.</p> -->
 
 <div class="rooms">
-    <app-map></app-map>
     <div class="bookings">
-        <div *ngFor="let booking of bookings">
+        <div  *ngFor="let booking of bookings">
             <div class="card" *ngIf="booking.user.name == user.name" style="background-color: {{booking.room.color}}">
                 <div>
                     <h3>{{booking.purpose.name}}</h3>
