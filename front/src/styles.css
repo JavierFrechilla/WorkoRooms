@@ -84,8 +84,9 @@ input:focus {
 }
 
 .fc {
-    width: 30%;
-    margin: auto;
+    width: 50vw;
+    margin-right: 2em;
+    margin-left: 2em;
 }
 
 .fc-toolbar h2 {

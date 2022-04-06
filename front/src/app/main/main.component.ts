@@ -9,7 +9,12 @@ import { PurposeService } from '../purpose/purpose.service';
 import { Purpose } from '../purpose/purpose';
 import { RoomService } from '../room/room.service';
 import { Room } from '../room/room';
-
+import { DtocalendarService } from '../dtocalendar/dtocalendar.service';
+import { Dtocalendar } from '../dtocalendar/dtocalendar';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+import interactionPlugin from '@fullcalendar/interaction';
+import esLocale from '@fullcalendar/core/locales/es'
 
 @Component({
   selector: 'app-main',
@@ -19,7 +24,7 @@ import { Room } from '../room/room';
 export class MainComponent implements OnInit {
   userId: number = -1;
 
-  constructor(public userService: UserService, public bookingService: BookingService, public purposeService: PurposeService, public roomService: RoomService) { }
+  constructor(public userService: UserService, public bookingService: BookingService, public purposeService: PurposeService, public roomService: RoomService, public CalendarService: DtocalendarService) { }
   purposeOb?= []
   roomOb?= []
   bookings = []
@@ -41,7 +46,7 @@ export class MainComponent implements OnInit {
     state: true,
     color: '',
   }
-
+  today: any = new Date().toISOString()
 
   user: User = {
 
@@ -58,9 +63,29 @@ export class MainComponent implements OnInit {
     icon: '',
   }
   service: any
+  
+  calendar?: Dtocalendar[];
+
+  public events: any[] = [];
+  public options: any;
+  public arrayPeio: any[] = [];  
 
   ngOnInit(): void {
 
+    this.getdataBookings()
+
+    this.options = {
+        
+      plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+      defaulDate: new Date(),
+      locale: esLocale,
+      header: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+      },
+      editable: false,
+    }
 
     if (localStorage.getItem("User")) {
       this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
@@ -69,6 +94,7 @@ export class MainComponent implements OnInit {
         this.user = data;
         // console.log(this.user);
       })
+      console.log(this.today)
     }
 
     this.getdataPurpose();
@@ -92,6 +118,17 @@ export class MainComponent implements OnInit {
       this.purposeOb = data;
       // console.log(this.purposeOb);
     })
+  }
+
+  getdataBookings(): void {
+    this.CalendarService.getData().subscribe(data => {
+      this.calendar = data;
+      console.log(this.calendar);
+      this.calendar.forEach(cal => {
+        this.arrayPeio.push({ title: cal.userName + " / " + cal.purposeName, start: cal.dateIn, end: cal.dateOut, color: cal.roomColor })
+      });
+      this.events = this.arrayPeio
+    });
   }
 
 
