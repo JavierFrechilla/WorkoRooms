@@ -12,7 +12,7 @@ body {
     margin: 0;
 }
 
-.noScroll{
+.noScroll {
     overflow-y: hidden;
 }
 
@@ -91,12 +91,17 @@ input:focus {
     width: 45vw;
     margin-right: 2em;
     margin-left: 2em;
+    color: black
 }
 
 .fc-toolbar h2 {
     margin: 0;
     color: #FB088C;
     font-family: "Moderat";
+}
+
+.fc-view-container * {
+    color: black;
 }
 
 

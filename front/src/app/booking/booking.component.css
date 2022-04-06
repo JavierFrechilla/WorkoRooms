@@ -2,32 +2,42 @@ input {
     height: auto;
 }
 
-h2{
+h2 {
     font-size: 2em;
+    text-align: center;
 }
 
-.radioInput{
+h3 {
     font-size: 1.5em;
 }
 
+.radioInput {
+    font-size: 1em;
+}
 
-
-.bookingContainer{
+.bookingContainer {
     display: flex;
     flex-direction: row;
     margin: 2em;
     justify-content: space-between;
 }
 
-.width{
-    width: 30%;
+.width {
+    width: 40%;
+    margin-left: 8em;
 }
 
-.map{
-    position: relative;
+.map {
+    display: flex;
+    transform: rotate(90deg);
+    margin: 120px;
+    margin: 0;
+    margin-right: 15em;
+    padding: 0;
 }
 
-.pinkButton{
+.pinkButton {
     margin-top: 2em;
-    width: 15em;
+    width: 16em;
+    height: 3em;
 }
