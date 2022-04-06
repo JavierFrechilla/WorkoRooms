@@ -1,7 +1,7 @@
 /* map */
 .map svg {
     display: flex;
-    height: 90vh;
+    height: 75vh;
     margin: auto;
     /* transform: rotate(90deg); */
 }
