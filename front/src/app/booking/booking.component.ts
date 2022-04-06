@@ -38,7 +38,8 @@ export class BookingComponent implements OnInit {
   roomObId?: Room[];
   id: number = 0;
   userId: number = 0;
-  highLightV: number = -1
+  highLightV: number = -1;
+  today: any = new Date().toISOString().substring(0, 16)
   
   ngOnInit(): void {
     this.getdataUser()
