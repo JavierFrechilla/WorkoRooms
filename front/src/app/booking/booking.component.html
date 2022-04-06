@@ -44,17 +44,17 @@
         </select>
 
         <h3>Fecha de inicio</h3>
-        <input type="datetime-local" [(ngModel)]="newBooking.dateIn" min='2022-04-11T15:00'>
+        <input type="datetime-local" [(ngModel)]="newBooking.dateIn" min={{today}}>
 
         <h3>Fecha de finalización</h3>
-        <input type="datetime-local" [(ngModel)]="newBooking.dateOut" min='2022-04-11T15:00'>
+        <input type="datetime-local" [(ngModel)]="newBooking.dateOut" min={{newBooking.dateIn}}>
 
-        <h3>Participantes</h3>
+        <!-- <h3>Participantes</h3>
         <form>
             <label *ngFor="let user of userOb">
                 <input [value]='user' type="checkbox" name="enums2">{{user.name}}
             </label>
-        </form>
+        </form> -->
         <!--  [(ngModel)]="participants"-->
         <button class="pinkButton" (click)="postBooking()">Crear reunión</button>
     </div>
