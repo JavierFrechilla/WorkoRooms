@@ -1,25 +1,34 @@
-<h3 class="welcome">Bienvenido, {{user.name}}</h3>
+<!-- <h3 class="welcome">Bienvenido, {{user.name}}</h3> -->
 <!-- <p class="centerSubtitle">Echa un vistazo a las reservas actuales y gestiona tu tiempo.</p> -->
 
 <div class="rooms">
     <div class="bookings">
-        <h3 class="bookingIntro">Mis reservas</h3>
+        <div class="myBookings">
+            <h3 class="bookingIntro">Mis reservas</h3>
+            <img class="clickable" src="/assets/img/plus.svg" alt="plusButton" routerLink="/booking">
+        </div>
         <div *ngFor="let booking of bookings">
             <div *ngIf="booking.user.name == user.name">
                 <div class="card" *ngIf="booking.dateIn > today" style="background-color: {{booking.room.color}}">
-                    <h3>{{booking.purpose.name}}</h3>
-                    <p class="opacity">{{booking.dateIn| date:'dd-MM-yyyy HH:mm'}}</p>
-                    <p class="opacity">{{booking.dateOut| date:'dd-MM-yyyy HH:mm'}}</p>
-                    <p class="opacity">{{booking.room.name}}</p>
-                    <p class="opacity">{{booking.user.name}} {{booking.user.surname}}</p>                 
+                    <div class="cardRow">
+                        <h3>{{booking.purpose.name}}</h3>
+                        <p class="opacity">{{booking.dateIn| date:'dd-MM-yyyy HH:mm'}}</p>
+                        <p class="opacity">{{booking.dateOut| date:'dd-MM-yyyy HH:mm'}}</p>
+                        <p class="opacity">{{booking.room.name}}</p>
+                        <p class="opacity">{{booking.user.name}} {{booking.user.surname}}</p>
+                    </div>
+                    <div class="columnIcons">
+                        <img class="trash" (click)="deleteBooking(booking)" src="/assets/img/trash.svg" alt="trashButton">
+                        <img class="edit" routerLink="/edit" src="/assets/img/edit.svg" alt="editButton">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <app-calendar></app-calendar>
+    <app-calendar class="calendarSize"></app-calendar>
     <div>
         <h3 class="bookingIntro">Mapa</h3>
         <app-map></app-map>
-    </div>      
+    </div>
 </div>
- <!-- -->
+<!-- -->
