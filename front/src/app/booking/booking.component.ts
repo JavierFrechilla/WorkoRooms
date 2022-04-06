@@ -53,8 +53,8 @@ export class BookingComponent implements OnInit {
 
   getBookings():void{
     this.service.getBookings().subscribe(data=>{this.bookings=data;
-    console.log(this.bookings);
-  })
+      console.log(this.bookings);
+    })
   }
 
   postBooking():void{
