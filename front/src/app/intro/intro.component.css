@@ -30,14 +30,14 @@
 .loginButton {
     font-family: "Moderat";
     background-color: white;
-    border: 0.2em solid #212222;
-    color: #212222;
+    border: 0.2em solid black;
+    color: black;
     height: 10%;
     width: 20%;
 }
 
 .loginButton:hover {
-    background-color: #212222;
+    background-color: black;
     color: white;
 }
 
