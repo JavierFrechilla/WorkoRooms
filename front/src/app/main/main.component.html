@@ -7,9 +7,10 @@
         <div class="card" *ngFor="let booking of bookings" style="background-color: {{booking.room.color}}">
             <div>
                 <h3>{{booking.purpose.name}}</h3>
-                <p><b> {{booking.dateIn| date:'dd-MM-yyyy HH:mm'}}</b></p>
-                <p><b> {{booking.dateOut| date:'dd-MM-yyyy HH:mm'}}</b> </p>
+                <p> {{booking.dateIn| date:'dd-MM-yyyy HH:mm'}}</p>
+                <p> {{booking.dateOut| date:'dd-MM-yyyy HH:mm'}} </p>
                 <p>{{booking.room.name}}</p>
+                <p>{{booking.user.name}} {{booking.user.surname}}</p>
 
 
             </div>
