@@ -42,6 +42,7 @@ const routes: Routes = [
   {path:'profile',component: ProfileComponent},
   {path: 'booking', component:BookingComponent},
   {path:'calendar',component:CalendarComponent},
+  {path: 'edit', component: EditComponent},
   {path: '**', component: NotfoundComponent},
 
 ]
