@@ -92,12 +92,17 @@ input:focus {
     width: 45vw;
     margin-right: 2em;
     margin-left: 2em;
+    color: black
 }
 
 .fc-toolbar h2 {
     margin: 0;
     color: black;
     font-family: "Moderat";
+}
+
+.fc-view-container * {
+    color: black;
 }
 
 
