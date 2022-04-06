@@ -57,8 +57,8 @@ export class BookingComponent implements OnInit {
   }
 
   postBooking():void{
-    console.log(this.participants)
     this.newBooking.userId = this.userId;
+    console.log(this.newBooking)
     this.service.postBooking(this.newBooking).subscribe()
   }
 
@@ -103,7 +103,7 @@ export class BookingComponent implements OnInit {
 
   highLight(): void{
     // console.log(this.highLightV)
-    this.newBooking.id = this.highLightV
+    this.newBooking.roomId = this.highLightV
   }
 
 }

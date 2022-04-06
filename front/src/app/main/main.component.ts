@@ -46,7 +46,7 @@ export class MainComponent implements OnInit {
     state: true,
     color: '',
   }
-
+  today: any = new Date().toISOString()
 
   user: User = {
 
@@ -94,6 +94,7 @@ export class MainComponent implements OnInit {
         this.user = data;
         // console.log(this.user);
       })
+      console.log(this.today)
     }
 
     this.getdataPurpose();
