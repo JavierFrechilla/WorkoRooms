@@ -1,0 +1,17 @@
+<div *ngIf="newBooking != undefined">
+
+    <h3>purposeId</h3>
+    <input type="number" [(ngModel)]="newBooking.purpose.name">
+
+    <h3>roomId</h3>
+    <input type="number" [(ngModel)]="newBooking.room.name">
+
+    <h3>dateIn</h3>
+    <input type="datetime-local" [(ngModel)]="newBooking.dateIn">
+
+    <h3>dateOut</h3>
+    <input type="datetime-local" [(ngModel)]="newBooking.dateOut">
+
+    <button (click)="updateBooking(newBooking)">Actualizar datos</button>
+    
+</div>

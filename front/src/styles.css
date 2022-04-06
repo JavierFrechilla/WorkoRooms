@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
 @font-face {
     font-family: "Moderat";
     src: local("Moderat"), url(src/assets/fonts/Moderat_Extended_Bold.otf) format("opentype");
@@ -44,7 +45,7 @@ button {
     border: none;
     cursor: pointer;
     font-size: 100%;
-    border-radius: 0.8em;
+    border-radius: 0.8em !important;
 }
 
 .pinkButton {
@@ -96,7 +97,7 @@ input:focus {
 
 .fc-toolbar h2 {
     margin: 0;
-    color: #FB088C;
+    color: black;
     font-family: "Moderat";
 }
 
