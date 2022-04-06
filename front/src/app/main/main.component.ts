@@ -70,8 +70,12 @@ export class MainComponent implements OnInit {
   public options: any;
   public arrayPeio: any[] = [];  
 
+  
+
   ngOnInit(): void {
 
+    this.changeScroll()
+    
     this.getdataBookings()
 
     this.options = {
@@ -94,7 +98,7 @@ export class MainComponent implements OnInit {
         this.user = data;
         // console.log(this.user);
       })
-      console.log(this.today)
+      
     }
 
     this.getdataPurpose();
@@ -103,27 +107,31 @@ export class MainComponent implements OnInit {
 
   }
 
+  ngOnDestroy(): void{
+    this.backToscroll()
+  }
+
   logOut(): void {
     localStorage.clear();
   }
   getdataRoom(): void {
     this.roomService.getRoom().subscribe(data => {
       this.roomOb = data;
-      // console.log(this.roomOb);
+      
     })
   }
   getdataPurpose(): void {
 
     this.purposeService.getPurpose().subscribe(data => {
       this.purposeOb = data;
-      // console.log(this.purposeOb);
+      
     })
   }
 
   getdataBookings(): void {
     this.CalendarService.getData().subscribe(data => {
       this.calendar = data;
-      console.log(this.calendar);
+      
       this.calendar.forEach(cal => {
         this.arrayPeio.push({ title: cal.userName + " / " + cal.purposeName, start: cal.dateIn, end: cal.dateOut, color: cal.roomColor })
       });
@@ -135,10 +143,30 @@ export class MainComponent implements OnInit {
   getBookings(): void {
     this.bookingService.getBookings().subscribe(data => {
       this.bookings = data;
-      console.log(this.bookings);
+      
     })
   }
 
+  deleteBooking(booking: Booking): void{
+    debugger;
+    if (booking.id != undefined)
+    {
+      this.bookingService.deleteBooking(booking.id).subscribe();
+    }
+    setTimeout(function(){
+      window.location.reload();
+   }, 3000);
+  }
+
+  changeScroll(){
+    const body = document.querySelector("body")
+    body?.classList.add("noScroll")
+  }
+
+  backToscroll(){
+    const body = document.querySelector("body")
+    body?.classList.remove("noScroll")
+  }
 
 }
 

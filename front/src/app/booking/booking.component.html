@@ -3,7 +3,7 @@
     <div *ngFor="let booking of bookings; let i = index">
 
         <h3>userId</h3>
-        <input type="number" [(ngModel)]="userOb.name">
+        
         <label>Selecciona un usuario: </label>
         <select id="listCenTra" [(ngModel)]="newBooking.userId">
 <option value="{{dato.id}}" *ngFor="let dato of userOb">
