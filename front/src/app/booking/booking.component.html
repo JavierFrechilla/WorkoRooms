@@ -45,7 +45,6 @@
 
         <h3>Fecha de inicio</h3>
         <input type="datetime-local" [(ngModel)]="newBooking.dateIn" min={{today}}>
-        <p>{{today}}</p>
 
         <h3>Fecha de finalización</h3>
         <input type="datetime-local" [(ngModel)]="newBooking.dateOut" min={{newBooking.dateIn}}>

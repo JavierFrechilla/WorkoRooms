@@ -48,7 +48,6 @@ export class BookingComponent implements OnInit {
     if(localStorage.getItem("User")){
       this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
       console.log(this.userId)
-      console.log(this.today)
     }
   }
 
