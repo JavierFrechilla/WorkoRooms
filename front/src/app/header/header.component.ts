@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { User } from '../user/user';
 import { UserService } from '../user/user.service';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -20,28 +22,38 @@ export class HeaderComponent implements OnInit {
   }
   localStorage?: any;
   id?: number;
+  currentRoute: string;
 
-  constructor(public service: UserService) { }
+  constructor(public service: UserService, private router: Router) { }
 
-  
+
 
   ngOnInit(): void {
-    if(localStorage.getItem('User') != null && localStorage.getItem('User') != undefined){
+    if (localStorage.getItem('User') != null && localStorage.getItem('User') != undefined) {
       this.localStorage = localStorage.getItem('User');
       this.id = parseInt(this.localStorage);
-      this.service.getUser(this.id).subscribe(data =>{
-        this.us = data});
+      this.service.getUser(this.id).subscribe(data => {
+        this.us = data
+      });
       console.log(this.us);
     }
+    
+    this.getRoute();
   }
 
-  logOut(): void{
+  logOut(): void {
     localStorage.clear;
   }
 
-  reload(): void{
+  reload(): void {
     window.location.reload();
   }
 
+  getRoute(): any{
+    return window.location.href
+  }
 
 }
+
+
+

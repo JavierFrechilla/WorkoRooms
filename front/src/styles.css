@@ -12,6 +12,10 @@ body {
     margin: 0;
 }
 
+.noScroll{
+    overflow-y: hidden;
+}
+
 
 /* @keyframes slideInLeft {
     100% {
@@ -84,7 +88,7 @@ input:focus {
 }
 
 .fc {
-    width: 50vw;
+    width: 45vw;
     margin-right: 2em;
     margin-left: 2em;
 }
