@@ -201,6 +201,18 @@ p {
     font-family: 'Moderat';
 }
 
+
+.st0 {
+    opacity: 0.1;
+    fill: #FFCD04;
+    enable-background: new;
+}
+
+.st0:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
 @media(max-width:767px) {
     .map img {
         transform: rotate(360deg);
