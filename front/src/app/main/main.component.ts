@@ -168,6 +168,9 @@ export class MainComponent implements OnInit {
     body?.classList.remove("noScroll")
   }
 
+  setItemBooking(booking: Booking): void{
+    localStorage.setItem("Booking", JSON.stringify(booking))
+  }
 }
 
 

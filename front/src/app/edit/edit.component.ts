@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Booking } from '../booking/booking';
 import { BookingService } from '../booking/booking.service';
+import { Room } from '../room/room';
+import { RoomService } from '../room/room.service';
+import { Purpose } from '../purpose/purpose';
+import { PurposeService } from '../purpose/purpose.service';
 
 @Component({
   selector: 'app-edit',
@@ -9,10 +13,13 @@ import { BookingService } from '../booking/booking.service';
 })
 export class EditComponent implements OnInit {
 
-  constructor(public service: BookingService) { }
+  constructor(public service: BookingService, public RoomService: RoomService, public PurposeService: PurposeService) { }
 
   newBooking: Booking;
   localStorage?: any;
+  roomOb?: Room[];
+  purposeOb?: Purpose[];
+  today: any = new Date().toISOString().substring(0, 16)
 
   ngOnInit(): void {
     if (localStorage.getItem('Booking') != null && localStorage.getItem('Booking') != undefined) {
@@ -20,6 +27,8 @@ export class EditComponent implements OnInit {
       this.newBooking = JSON.parse(this.localStorage);
       console.log(this.newBooking);
     }
+    this.getdataPurpose()
+    this.getdataRoom()
   }
 
   updateBooking(booking: Booking):void{
@@ -28,5 +37,17 @@ export class EditComponent implements OnInit {
       this.service.updateBooking(this.newBooking).subscribe()
       console.log(this.newBooking)
     }
+  }
+  
+  getdataRoom():void{
+    this.RoomService.getRoom().subscribe(data=>{this.roomOb=data;
+    console.log(this.roomOb);
+    })
+  }
+
+  getdataPurpose():void{
+    this.PurposeService.getPurpose().subscribe(data=>{this.purposeOb=data;
+    console.log(this.purposeOb);
+    })
   }
 }
