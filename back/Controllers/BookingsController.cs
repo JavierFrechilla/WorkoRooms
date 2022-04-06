@@ -25,7 +25,7 @@ namespace workorooms.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Booking>>> GetBooking()
         {
-            return await _context.Booking.Include(p => p.Purpose).Include(r=>r.Room).ToListAsync();
+            return await _context.Booking.Include(p => p.Purpose).Include(r=>r.Room).Include(u => u.User).ToListAsync();
         }
 
         // GET: api/Bookings/5
