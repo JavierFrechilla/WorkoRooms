@@ -4,16 +4,25 @@
 <div class="rooms">
     <app-map></app-map>
     <div class="bookings">
+        <h3 class="bookingIntro">Mis reservas</h3>
         <div *ngFor="let booking of bookings">
-            <div class="card" *ngIf="booking.user.name == user.name" style="background-color: {{booking.room.color}}">
-                <div>
-                    <h3>{{booking.purpose.name}}</h3>
-                    <p>{{booking.dateIn| date:'dd-MM-yyyy HH:mm'}}</p>
-                    <p>{{booking.dateOut| date:'dd-MM-yyyy HH:mm'}}</p>
-                    <p>{{booking.room.name}}</p>
-                    <p>{{booking.user.name}} {{booking.user.surname}}</p>
+            <div *ngIf="booking.user.name == user.name" style="background-color: {{booking.room.color}}">
+                <div class="card" *ngIf="booking.dateIn > today">
+                    <div>
+                        <h3>{{booking.purpose.name}}</h3>
+                        <p class="opacity">{{booking.dateIn| date:'dd-MM-yyyy HH:mm'}}</p>
+                        <p class="opacity">{{booking.dateOut| date:'dd-MM-yyyy HH:mm'}}</p>
+                        <p class="opacity">{{booking.room.name}}</p>
+                        <p class="opacity">{{booking.user.name}} {{booking.user.surname}}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <app-calendar></app-calendar>
+    <div>
+        <h3 class="bookingIntro">Mapa</h3>
+        <app-map></app-map>
+    </div>      
 </div>
+ <!-- -->
