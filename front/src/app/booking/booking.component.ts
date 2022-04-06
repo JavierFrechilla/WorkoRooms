@@ -38,14 +38,12 @@ export class BookingComponent implements OnInit {
   roomObId?: Room[];
   id: number = 0;
   userId: number = 0;
-  today = new Date().toISOString().split('T')[0];
   highLightV: number = -1
   
   ngOnInit(): void {
     this.getdataUser()
     this.getdataRoom()
     this.getdataPurpose()
-    this.disableDates()
     if(localStorage.getItem("User")){
       this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
       console.log(this.userId)
@@ -101,10 +99,6 @@ export class BookingComponent implements OnInit {
     if(this.participants != undefined){
       this.ParticipantService.postParticipants(this.participants).subscribe()
     }
-  }
-
-  disableDates():void{
-    document.getElementsByName('book')[0].setAttribute('min', this.today);
   }
 
   highLight(): void{

@@ -34,7 +34,7 @@
         <h3>Selecciona la sala</h3>
         <form>
             <label class="radioInput" *ngFor="let room of roomOb">
-                <input id="radio" (click)="highLight()" type="radio" [(ngModel)]="highLightV" [value]='room.id' name="enums">{{room.name}}
+                <input id="radio" (click)="highLight()" type="radio" [(ngModel)]="highLightV"  [value]='room.id' name="enums">{{room.name}}
             </label>
         </form>
 

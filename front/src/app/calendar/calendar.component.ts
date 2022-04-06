@@ -22,7 +22,7 @@ export class CalendarComponent implements OnInit {
   calendar?: Dtocalendar[];
 
   ngOnInit() {
-    this.getBookings()
+    this.getdataBookings()
 
     this.options = {
         
@@ -38,7 +38,7 @@ export class CalendarComponent implements OnInit {
     }
   }
 
-  getBookings(): void {
+  getdataBookings(): void {
     this.CalendarService.getData().subscribe(data => {
       this.calendar = data;
       console.log(this.calendar);
