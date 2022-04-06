@@ -30,6 +30,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import {FullCalendarModule} from 'primeng/fullcalendar'
 import { MapComponent } from './map/map.component';
 import { DtocalendarComponent } from './dtocalendar/dtocalendar.component';
+import { EditComponent } from './edit/edit.component';
 
 const routes: Routes = [
  
@@ -64,7 +65,7 @@ const routes: Routes = [
     NotfoundComponent,
     HeaderComponent,
     CalendarComponent, 
-    MapComponent 
+    MapComponent, EditComponent 
    ],
 
   imports: [
