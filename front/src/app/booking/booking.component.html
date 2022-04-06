@@ -1,8 +1,9 @@
 <div class="bookingContainer">
 
+
     <div class="width">
-        <h2>Reserva</h2>
-        <h3>Selecciona la sala</h3>
+
+        <h3>Selecciona una sala</h3>
         <form>
             <label class="radioInput" *ngFor="let room of roomOb">
                 <input id="radio" (click)="highLight()" type="radio" [(ngModel)]="highLightV" [(ngModel)]="newBooking.roomId" [value]='room.id' name="enums">{{room.name}}
@@ -27,9 +28,12 @@
             </label>
         </form> -->
         <!--  [(ngModel)]="participants"-->
-        <button class="pinkButton" (click)="postBooking()">Crear reunión</button>
+        <div>
+            <button class="pinkButton" (click)="postBooking()" routerLink="/main">Crear reunión</button>
+        </div>
     </div>
-
-    <app-map class="map" [highLightV]="highLightV"></app-map>
+    <div class="map">
+        <app-map [highLightV]="highLightV"></app-map>
+    </div>
 
 </div>
