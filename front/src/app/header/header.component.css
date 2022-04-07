@@ -31,5 +31,23 @@
     .logoContainer{
     
         text-align: center;
+        flex-direction: column;
+        margin: 1em 0 2em 0;
+    }
+
+    .profile p{
+        display: none;
+    }
+
+    .logo{
+        width: 50%;
+    }
+
+    .welcome{
+        font-size: 1.5em;
+    }
+
+    .profileImage{
+        display: none;
     }
 }

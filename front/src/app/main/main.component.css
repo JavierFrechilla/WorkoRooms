@@ -213,15 +213,6 @@ p {
     cursor: pointer;
 }
 
-@media(max-width:767px) {
-    .map img {
-        transform: rotate(360deg);
-    }
-    .rooms {
-        flex-direction: row;
-    }
-}
-
 .navBar {
     display: flex;
     flex-direction: row;
@@ -238,4 +229,44 @@ p {
     height: 2em;
     margin: 1em;
     cursor: pointer;
+}
+
+@media(max-width:767px) {
+    
+    .map{
+        display: none;
+    }
+
+    .rooms{
+        
+        flex-direction: column;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+
+    .bookings{
+        width: 90%;
+        margin: auto;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .myBookings{
+        justify-content: center;
+        height: 3em;
+        margin-top: 1em;
+    }
+
+    .myBookings img{
+        height: 3em;
+    }
+
+    
+
+    .bookingIntro{
+        display: none;
+    }
 }
