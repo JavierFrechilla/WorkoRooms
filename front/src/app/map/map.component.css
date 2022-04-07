@@ -116,3 +116,9 @@
     fill: #808080;
     enable-background: new;
 }
+
+@media (max-width: 767px){
+    .map{
+        display: none;
+    }
+}

@@ -5,7 +5,7 @@
 <ng-template #link>
     <div class="logoContainer">
         <a class="logo" href="http://localhost:4200/main"><img src="assets/logo/workorooms_pink.svg" alt="logo"></a>
-        <h3 *ngIf="getRoute() == 'http://localhost:4200/main'" class="welcome">Bienvenido, {{us.name}}</h3>
+        <h3 *ngIf="getRoute() == 'http://localhost:4200/main'" class="welcome">Welköm, {{us.name}}!</h3>
         <div class="profile">
             <p routerLink="profile">{{us.name}} {{us.surname}}</p>
             <img class="profileImage" src="{{us.photo}}" alt="userimage" routerLink="profile">

@@ -1,4 +1,9 @@
+<h2>Reservar sala</h2>
 <div class="bookingContainer">
+
+    <div class="map1">
+        <img src="../../assets/img/map.svg" alt="">
+    </div>
 
 
     <div class="width">
@@ -6,9 +11,11 @@
         <h3>Selecciona una sala</h3>
         <form>
             <label class="radioInput" *ngFor="let room of roomOb">
-                <input id="radio" (click)="highLight()" type="radio" [(ngModel)]="highLightV" [(ngModel)]="newBooking.roomId" [value]='room.id' name="enums">{{room.name}}
+                <input  (click)="highLight()" type="radio" [(ngModel)]="highLightV" [(ngModel)]="newBooking.roomId" [value]='room.id' name="enums">{{room.name}}
             </label>
         </form>
+
+
 
         <h3>Razón</h3>
         <select [(ngModel)]="newBooking.purposeId">
