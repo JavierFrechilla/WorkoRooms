@@ -105,4 +105,8 @@ button:hover {
     .deleteButton {
         margin-bottom: 2em;
     }
+
+    .profileIcon{
+        display: none;
+    }
 }

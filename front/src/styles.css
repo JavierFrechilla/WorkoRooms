@@ -11,6 +11,8 @@ html,
 body {
     min-height: 100vh;
     margin: 0;
+    animation: expand .8s ease forwards;
+    transition: all .8s ease;
 }
 
 .noScroll {
@@ -106,6 +108,23 @@ input:focus {
     color: black;
 }
 
+
+.fc.fc-unthemed .fc-toolbar .fc-button {
+    color: #ffffff;
+    background: #FB088C !important;
+    border: 1px solid #FB088C !important;
+}
+
+.fc.fc-unthemed:hover .fc-toolbar:hover .fc-button:hover {
+    background: #b91a72 !important;
+    border: 1px solid #b91a72 !important;
+    color: white;
+}
+
+.fc-dayGrid-view .fc-day-number, .fc-dayGrid-view .fc-week-number {
+    padding: 2px;
+    font-weight: 700; 
+}
 
 /* .fc-event,
 .fc-event-dot {

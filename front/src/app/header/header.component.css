@@ -27,9 +27,16 @@
     cursor: pointer;
 }
 
+
+.dark-mode {
+    background-color: black;
+    color: white;
+  }
+
+
 @media(max-width: 767px){
     .logoContainer{
-    
+        gap: 1em;
         text-align: center;
         flex-direction: column;
         margin: 1em 0 2em 0;
@@ -47,7 +54,5 @@
         font-size: 1.5em;
     }
 
-    .profileImage{
-        display: none;
-    }
+    
 }
