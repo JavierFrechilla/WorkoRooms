@@ -1,0 +1,29 @@
+.center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 66%;
+    margin: auto;
+}
+
+.notFound{
+    height: 20em;
+}
+
+h3{
+    font-size: 4em;
+    text-align: center;
+}
+
+@media (max-width: 767px){
+    
+    .center{
+        flex-direction: column;
+    }
+
+    h3{
+        font-size: 2em;
+    }
+    
+}
