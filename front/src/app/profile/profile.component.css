@@ -98,6 +98,10 @@ button:hover {
         height: 10%;
         font-size: 1.2em;
     }
+    .logOut {
+        margin-right: 0;
+        justify-content: center;
+    }
     .deleteButton {
         margin-bottom: 2em;
     }
