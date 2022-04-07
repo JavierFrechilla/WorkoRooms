@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { RoomComponent } from './room/room.component';
 import { UserComponent } from './user/user.component';
 import { PurposeComponent } from './purpose/purpose.component';
-import { ParticipantComponent } from './participant/participant.component';
 import { BookingComponent } from './booking/booking.component';
 import { DtobookingComponent } from './dtobooking/dtobooking.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -43,6 +42,7 @@ const routes: Routes = [
   {path: 'booking', component:BookingComponent},
   {path:'calendar',component:CalendarComponent},
   {path: 'edit', component: EditComponent},
+  {path: 'dto', component: DtobookingComponent},
   {path: '**', component: NotfoundComponent},
 
 ]
@@ -53,7 +53,6 @@ const routes: Routes = [
     RoomComponent,
     UserComponent,
     PurposeComponent,
-    ParticipantComponent,
     BookingComponent,
     DtobookingComponent,
     IntroComponent,
@@ -66,7 +65,8 @@ const routes: Routes = [
     NotfoundComponent,
     HeaderComponent,
     CalendarComponent, 
-    MapComponent, EditComponent 
+    MapComponent, 
+    EditComponent 
    ],
 
   imports: [

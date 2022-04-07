@@ -1,7 +1,7 @@
 import { Guid } from "guid-typescript";
 
 export interface Participant {
-    id: number,
+    id?: number,
     userId: number,
     bookingId: Guid
 }
