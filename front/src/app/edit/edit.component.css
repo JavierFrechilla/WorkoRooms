@@ -1,3 +1,94 @@
-input{
+input {
     height: auto;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.radioInput {
+    font-size: 1em;
+}
+
+.bookingContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 15em;
+    justify-content: center;
+}
+
+.width {
+    width: 20%;
+    margin-left: 8em;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.map {
+    /* display: flex; */
+    transform: rotate(90deg);
+    margin-right: 10em;
+    margin-bottom: 20em;
+}
+
+.pinkButton {
+    margin-top: 2em;
+    width: 16em;
+    height: 3em;
+}
+
+.map img {
+    width: 10px;
+}
+
+.map1 img {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .bookingContainer {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        margin: auto;
+        align-items: center;
+    }
+    .map {
+        display: none;
+    }
+    .width {
+        font-size: 0.9em;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        width: 70vw;
+        text-align: center;
+    }
+    h2 {
+        font-size: 1em;
+        text-align: center;
+    }
+    h3 {
+        font-size: 1em;
+    }
+    .map1 img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(90deg);
+        width: 50vw;
+        margin: auto;
+    }
+    .map1 {
+        margin: auto;
+    }
+    .pinkButton {
+        margin-bottom: 2em;
+    }
 }
