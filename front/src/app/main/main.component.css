@@ -248,6 +248,7 @@ p {
     }
 
     .bookings{
+        flex-direction: column-reverse;
         width: 90%;
         margin: auto;
         height: 100%;
@@ -261,10 +262,16 @@ p {
     }
 
     .myBookings img{
-        height: 3em;
+        height: 4em;
     }
 
-    
+    .clickable{
+        position: fixed;  
+        bottom: 4em;
+        justify-content: center;
+        align-content: flex-end;
+        z-index: 2;
+    }
 
     .bookingIntro{
         display: none;
