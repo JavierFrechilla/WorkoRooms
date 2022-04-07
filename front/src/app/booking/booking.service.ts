@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Guid } from 'guid-typescript';
 import { Observable } from 'rxjs';
 import { Booking } from './booking';
 
@@ -26,7 +27,7 @@ export class BookingService {
     return this.http.put('https://localhost:44377/api/Bookings/'+booking.id, booking, this.httpOptions)
   }
 
-  deleteBooking(id: number): Observable<Booking>{
+  deleteBooking(id: Guid): Observable<Booking>{
     return this.http.delete<Booking>('https://localhost:44377/api/Bookings/'+id, this.httpOptions)
   }
   
