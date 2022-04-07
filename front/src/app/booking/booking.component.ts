@@ -45,7 +45,7 @@ export class BookingComponent implements OnInit {
     this.getdataUser()
     this.getdataRoom()
     this.getdataPurpose()
-    this.changeScroll()
+    // this.changeScroll()
     if(localStorage.getItem("User")){
       this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
       console.log(this.userId)

@@ -1,5 +1,9 @@
 <div class="bookingContainer">
 
+    <div class="map1">
+        <img src="../../assets/img/map.svg" alt="">
+    </div>
+
 
     <div class="width">
 
@@ -9,6 +13,8 @@
                 <input id="radio" (click)="highLight()" type="radio" [(ngModel)]="highLightV" [(ngModel)]="newBooking.roomId" [value]='room.id' name="enums">{{room.name}}
             </label>
         </form>
+
+
 
         <h3>Razón</h3>
         <select [(ngModel)]="newBooking.purposeId">
