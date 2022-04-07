@@ -29,14 +29,12 @@ export class MainComponent implements OnInit {
   roomOb?= []
   bookings = []
   booking: Booking = {
-    id: 0,
+    id: null,
     userId: 0,
     purposeId: 0,
     roomId: 0,
     dateIn: new Date(),
     dateOut: new Date(),
-    participants: [],
-
   }
   Room: Room = {
     id: 0,
@@ -148,14 +146,13 @@ export class MainComponent implements OnInit {
   }
 
   deleteBooking(booking: Booking): void{
-    debugger;
     if (booking.id != undefined)
     {
       this.bookingService.deleteBooking(booking.id).subscribe();
     }
     setTimeout(function(){
       window.location.reload();
-   }, 3000);
+   }, 100);
   }
 
   changeScroll(){

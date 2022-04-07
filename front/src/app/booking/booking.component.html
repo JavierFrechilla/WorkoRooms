@@ -29,12 +29,23 @@
         <input type="datetime-local" [(ngModel)]="newBooking.dateOut" min={{newBooking.dateIn}}>
 
         <!-- <h3>Participantes</h3>
-        <form>
+            <form *ngIf="newBooking.roomId == 1">
             <label *ngFor="let user of userOb">
-                <input [value]='user' type="checkbox" name="enums2">{{user.name}}
+                <input [(ngModel)]="participants" [value]='user' type="checkbox" name="enums2">{{user.name}}
             </label>
-        </form> -->
-        <!--  [(ngModel)]="participants"-->
+        </form> 
+        <form *ngIf="newBooking.roomId == 2">
+            <label *ngFor="let user of userOb">
+                <input [(ngModel)]="participants" [value]='user' type="checkbox" name="enums2">{{user.name}}
+            </label>
+        </form>
+        <select *ngIf="newBooking.roomId == 3" [(ngModel)]="participant.userId">
+            <option *ngFor="let user of userOb" [value]='user.id'>{{user.name}}</option>
+        </select>
+        <select *ngIf="newBooking.roomId == 4" [(ngModel)]="participant.userId">
+            <option *ngFor="let user of userOb" [value]='user.id'>{{user.name}}</option>
+        </select> -->
+        
         <div>
             <button class="pinkButton" (click)="postBooking()" routerLink="/main">Crear reunión</button>
         </div>

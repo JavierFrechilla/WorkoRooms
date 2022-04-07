@@ -14,7 +14,11 @@ export class ParticipantService {
     httpHeaders: new HttpHeaders({'Content-Type': 'application/json'})
   }
 
+  postParticipant(participant: Participant): Observable<Participant>{
+    return this.http.post<Participant>('https://localhost:44377/api/Participants/', participant, this.httpOptions)
+  }
+
   postParticipants(participant: Participant[]): Observable<Participant[]>{
-    return this.http.post<Participant[]>('https://localhost:44377/api/Participants', participant, this.httpOptions)
+    return this.http.post<Participant[]>('https://localhost:44377/api/Participants/addParticipants', participant, this.httpOptions)
   }
 }

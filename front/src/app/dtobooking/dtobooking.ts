@@ -1,3 +1,7 @@
+import { Booking } from "../booking/booking";
+import { Participant } from "../participant/participant";
+
 export interface Dtobooking {
-    id: number,
+    booking: Booking,
+    participants: Participant[]
 }
