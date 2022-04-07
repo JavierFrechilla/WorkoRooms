@@ -53,6 +53,13 @@ export class HeaderComponent implements OnInit {
     return window.location.href
   }
 
+  element: any;
+
+  darkMode(): void {
+    this.element = document.body;
+    this.element.classList.toggle("dark-mode");
+ }
+
 }
 
 

@@ -74,7 +74,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.changeScroll()
+    // this.changeScroll()
     
     this.getdataBookings()
 
