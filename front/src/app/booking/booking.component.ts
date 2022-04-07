@@ -66,6 +66,9 @@ export class BookingComponent implements OnInit {
         this.ParticipantService.postParticipant(this.participant).subscribe()
       }
     }
+    setTimeout(function(){
+      window.location.reload();
+   }, 100);
   }
 
   getdataUser():void{
