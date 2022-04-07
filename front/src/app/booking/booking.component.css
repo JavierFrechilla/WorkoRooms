@@ -18,21 +18,22 @@ h3 {
 .bookingContainer {
     display: flex;
     flex-direction: row;
-    margin: 2em;
-    justify-content: space-between;
+    gap: 15em;
+    justify-content: center;
 }
 
 .width {
-    width: 40%;
-    margin-left: 8em;
+    width: 20%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .map {
-    display: flex;
+    /* display: flex; */
     transform: rotate(90deg);
-    margin: 0;
-    margin-right: 15em;
-    padding: 0;
+    margin-right: 10em;
+    margin-bottom: 20em;
 }
 
 .pinkButton {

@@ -20,7 +20,7 @@ export class EditComponent implements OnInit {
   roomOb?: Room[];
   purposeOb?: Purpose[];
   today: any = new Date().toISOString().substring(0, 16)
-
+  highLightV: number = -1;
   ngOnInit(): void {
     if (localStorage.getItem('Booking') != null && localStorage.getItem('Booking') != undefined) {
       this.localStorage = localStorage.getItem('Booking');
@@ -29,6 +29,7 @@ export class EditComponent implements OnInit {
     }
     this.getdataPurpose()
     this.getdataRoom()
+    
   }
 
   updateBooking(booking: Booking):void{
@@ -49,5 +50,9 @@ export class EditComponent implements OnInit {
     this.PurposeService.getPurpose().subscribe(data=>{this.purposeOb=data;
     console.log(this.purposeOb);
     })
+  }
+  highLight(): void{
+    // console.log(this.highLightV)
+    this.newBooking.roomId = this.highLightV
   }
 }
