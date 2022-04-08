@@ -1,5 +1,4 @@
 import { Guid } from "guid-typescript";
-import { Participant } from "../participant/participant";
 import { Purpose } from "../purpose/purpose";
 import { Room } from "../room/room";
 
@@ -11,5 +10,7 @@ export interface Booking {
     dateIn: Date,
     dateOut: Date,
     purpose?:Purpose
-    room?:Room
+    room?:Room,
+    participants?: string,
+    array?: string[]
 }

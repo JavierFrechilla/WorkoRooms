@@ -1,6 +1,4 @@
-import { Injectable } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { dateTimeLocale } from '@mobiscroll/angular/dist/js/core/util/datetime';
 import { Booking } from '../booking/booking';
 import { BookingService } from '../booking/booking.service';
 import { User } from '../user/user';
@@ -22,20 +20,15 @@ import esLocale from '@fullcalendar/core/locales/es'
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
-  userId: number = -1;
-
+  
   constructor(public userService: UserService, public bookingService: BookingService, public purposeService: PurposeService, public roomService: RoomService, public CalendarService: DtocalendarService) { }
+
+  userId: number = -1;
   purposeOb?= []
   roomOb?= []
   bookings = []
-  booking: Booking = {
-    id: null,
-    userId: 0,
-    purposeId: 0,
-    roomId: 0,
-    dateIn: new Date(),
-    dateOut: new Date(),
-  }
+  today: any = new Date().toISOString()
+  calendar?: Dtocalendar[];
   Room: Room = {
     id: 0,
     name: '',
@@ -44,10 +37,8 @@ export class MainComponent implements OnInit {
     state: true,
     color: '',
   }
-  today: any = new Date().toISOString()
-
   user: User = {
-
+    
     name: '',
     surname: '',
     photo: '',
@@ -60,24 +51,13 @@ export class MainComponent implements OnInit {
     name: '',
     icon: '',
   }
-  service: any
-  
-  calendar?: Dtocalendar[];
-
   public events: any[] = [];
   public options: any;
   public arrayPeio: any[] = [];  
 
-  
-
-  ngOnInit(): void {
-
-    // this.changeScroll()
-    
+  ngOnInit(): void {    
     this.getdataBookings()
-
-    this.options = {
-        
+    this.options = {      
       plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
       defaulDate: new Date(),
       locale: esLocale,
@@ -88,21 +68,15 @@ export class MainComponent implements OnInit {
       },
       editable: false,
     }
-
     if (localStorage.getItem("User")) {
       this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
       this.userService.getUser(this.userId).subscribe(data => {
-
         this.user = data;
-        // console.log(this.user);
-      })
-      
+      }) 
     }
-
     this.getdataPurpose();
     this.getBookings();
     this.getdataRoom();
-
   }
 
   ngOnDestroy(): void{
@@ -112,36 +86,35 @@ export class MainComponent implements OnInit {
   logOut(): void {
     localStorage.clear();
   }
+
   getdataRoom(): void {
     this.roomService.getRoom().subscribe(data => {
-      this.roomOb = data;
-      
+      this.roomOb = data;   
     })
   }
   getdataPurpose(): void {
-
     this.purposeService.getPurpose().subscribe(data => {
-      this.purposeOb = data;
-      
+      this.purposeOb = data;    
     })
   }
 
   getdataBookings(): void {
     this.CalendarService.getData().subscribe(data => {
       this.calendar = data;
-      
       this.calendar.forEach(cal => {
-        this.arrayPeio.push({ title: cal.userName + " / " + cal.purposeName, start: cal.dateIn, end: cal.dateOut, color: cal.roomColor })
+        this.arrayPeio.push({ title: cal.userName + " \n " + cal.purposeName, start: cal.dateIn, end: cal.dateOut, color: cal.roomColor })
       });
-      this.events = this.arrayPeio
+      // this.events = this.arrayPeio
     });
   }
 
-
   getBookings(): void {
     this.bookingService.getBookings().subscribe(data => {
-      this.bookings = data;
-      
+      this.bookings = data;     
+      this.bookings.forEach(element => {
+        element.array=element.participants.split(",")
+        console.log(element.array)
+      }); 
     })
   }
 
