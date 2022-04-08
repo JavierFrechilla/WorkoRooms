@@ -1,6 +1,3 @@
-<!-- <h3 class="welcome">Bienvenido, {{user.name}}</h3> -->
-<!-- <p class="centerSubtitle">Echa un vistazo a las reservas actuales y gestiona tu tiempo.</p> -->
-
 <div class="rooms">
     <div class="bookings">
         <div class="myBookings">
@@ -23,6 +20,19 @@
                     </div>
                 </div>
             </div>
+            <div *ngFor="let participant of booking.array">
+                <div *ngIf="participant == user.id">
+                    <div class="card" *ngIf="booking.dateIn > today" style="background-color: {{booking.room.color}}">
+                        <div class="cardRow">
+                            <h3>{{booking.purpose.name}}</h3>
+                            <p class="opacity">{{booking.dateIn| date:'dd-MM-yyyy HH:mm'}}</p>
+                            <p class="opacity">{{booking.dateOut| date:'dd-MM-yyyy HH:mm'}}</p>
+                            <p class="opacity">{{booking.room.name}}</p>
+                            <p class="opacity">{{booking.user.name}} {{booking.user.surname}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <app-calendar class="calendarSize"></app-calendar>
@@ -31,4 +41,3 @@
         <app-map></app-map>
     </div>
 </div>
-<!-- -->
