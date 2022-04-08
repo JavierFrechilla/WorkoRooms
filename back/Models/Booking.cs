@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace workorooms.Models
@@ -16,6 +15,6 @@ namespace workorooms.Models
         public User User { get; set; }
         public Purpose Purpose { get; set; }
         public Room Room { get; set; }
-        List<Participant> Participants { get; set; }
+        public string Participants { get; set; }
     }
 }
