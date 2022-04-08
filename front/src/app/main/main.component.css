@@ -1,4 +1,4 @@
-body html{
+body html {
     overflow-y: hidden;
 }
 
@@ -16,16 +16,16 @@ body html{
     flex-direction: column-reverse;
 }
 
-.clickable{
+.clickable {
     cursor: pointer;
     height: 2em;
 }
 
-.clickable:hover{
+.clickable:hover {
     filter: brightness(80%)
 }
 
-.myBookings{
+.myBookings {
     display: flex;
     flex-direction: row;
     max-height: 3em;
@@ -48,8 +48,6 @@ body html{
     display: flex;
     justify-content: center;
 }
-
-
 
 .welcome {
     font-family: 'moderat';
@@ -93,7 +91,7 @@ body html{
     margin-right: 2em;
 }
 
-.opacity{
+.opacity {
     opacity: 60%;
 }
 
@@ -118,36 +116,34 @@ body html{
     padding: 1em;
 }
 
-.cardRow{
+.cardRow {
     flex-direction: column;
 }
 
-
-
-.trash:hover{
+.trash:hover {
     opacity: 100%;
     filter: brightness(100%);
 }
 
-.trash{
+.trash {
     filter: brightness(0);
     opacity: 20%;
     cursor: pointer;
     height: 1.5em;
 }
 
-.edit{
+.edit {
     opacity: 20%;
     cursor: pointer;
     height: 1.5em;
 }
 
-.edit:hover{
+.edit:hover {
     opacity: 80%;
     /* filter: invert(100%); */
 }
 
-.columnIcons{
+.columnIcons {
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -184,7 +180,7 @@ h3 {
     font-weight: 700;
 }
 
-.bookingIntro{
+.bookingIntro {
     margin: 0;
     font-weight: 700;
     font-size: 2em;
@@ -200,7 +196,6 @@ p {
     color: #fb088c;
     font-family: 'Moderat';
 }
-
 
 .st0 {
     opacity: 0.1;
@@ -232,13 +227,10 @@ p {
 }
 
 @media(max-width:767px) {
-    
-    .map{
+    .map {
         display: none;
     }
-
-    .rooms{
-        
+    .rooms {
         flex-direction: column;
         flex-direction: column-reverse;
         justify-content: center;
@@ -246,34 +238,31 @@ p {
         width: 95%;
         margin: auto;
     }
-
-    .bookings{
+    .bookings {
         flex-direction: column-reverse;
         width: 90%;
         margin: auto;
         height: 100%;
         overflow-y: auto;
     }
-
-    .myBookings{
+    .myBookings {
         justify-content: center;
         height: 3em;
         margin-top: 1em;
     }
-
-    .myBookings img{
+    .myBookings img {
         height: 4em;
     }
-
-    .clickable{
-        position: fixed;  
+    .clickable {
+        /* position: fixed;   */
         bottom: 4em;
         justify-content: center;
         align-content: flex-end;
-        z-index: 2;
+        /* z-index: 2; */
+        margin-bottom: 2em;
+        margin: 2em;
     }
-
-    .bookingIntro{
+    .bookingIntro {
         display: none;
     }
 }
