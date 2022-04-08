@@ -37,8 +37,8 @@ export class CalendarComponent implements OnInit {
       editable: false,
     }
   }
-
-  getdataBookings(): void {
+  
+    getdataBookings(): void {
     this.CalendarService.getData().subscribe(data => {
       this.calendar = data;
       // console.log(this.calendar);

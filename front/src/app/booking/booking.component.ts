@@ -9,7 +9,6 @@ import { User } from '../user/user';
 import { UserService } from '../user/user.service';
 import { Booking } from './booking';
 import { BookingService } from './booking.service';
-import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-booking',
@@ -26,17 +25,15 @@ export class BookingComponent implements OnInit {
     roomId: 0,
     dateIn: new Date(),
     dateOut: new Date(),
-    participants: [],
-    
+  };
+  participant: Participant = {
+    userId: 0,
+    bookingId: this.newBooking.id
   };
   participants?: Participant[];
-  booking?: Booking;
-  bookings?: Booking[];
   userOb?: User[];
   roomOb?: Room[];
   purposeOb?: Purpose[];
-  roomObId?: Room[];
-  id: number = 0;
   userId: number = 0;
   highLightV: number = -1;
   today: any = new Date().toISOString().substring(0, 16)
@@ -55,31 +52,23 @@ export class BookingComponent implements OnInit {
     this.backToscroll()
   }
 
-  getBookings():void{
-    this.service.getBookings().subscribe(data=>{this.bookings=data;
-      console.log(this.bookings);
-    })
-  }
-
   postBooking():void{
     this.newBooking.userId = this.userId;
     console.log(this.newBooking)
     this.service.postBooking(this.newBooking).subscribe()
-  }
-
-  updateBooking(booking: Booking):void{
-    if (booking != undefined) {
-      this.booking = booking
-      this.service.updateBooking(this.booking).subscribe()
-      console.log(this.booking)
+    console.log(this.participant)
+    console.log(this.participants)
+    if(this.participants != undefined){
+      if(this.newBooking.roomId == 1 || this.newBooking.roomId == 2){
+        this.ParticipantService.postParticipants(this.participants).subscribe()
+      }
+      if(this.newBooking.roomId == 3 || this.newBooking.roomId == 4){
+        this.ParticipantService.postParticipant(this.participant).subscribe()
+      }
     }
-  }
-
-  deleteBooking(booking: Booking): void{
-    if (booking.id != undefined)
-    {
-      this.service.deleteBooking(booking.id).subscribe();
-    }
+    setTimeout(function(){
+      window.location.reload();
+   }, 100);
   }
 
   getdataUser():void{
@@ -98,12 +87,6 @@ export class BookingComponent implements OnInit {
     this.PurposeService.getPurpose().subscribe(data=>{this.purposeOb=data;
     console.log(this.purposeOb);
     })
-  }
-
-  postParticipants():void{
-    if(this.participants != undefined){
-      this.ParticipantService.postParticipants(this.participants).subscribe()
-    }
   }
 
   highLight(): void{
