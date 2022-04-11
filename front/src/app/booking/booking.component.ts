@@ -39,9 +39,9 @@ export class BookingComponent implements OnInit {
     this.getdataPurpose()
     if(localStorage.getItem("User")){
       this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
-      console.log(this.userId)
     }
   }
+
   ngOnDestroy(): void{
     this.backToscroll()
   }
@@ -65,25 +65,23 @@ export class BookingComponent implements OnInit {
 
   getdataUser():void{
     this.UserService.getUsers().subscribe(data=>{this.userOb=data;
-    console.log(this.userOb);
-  })
+    })
   }
 
   getdataRoom():void{
     this.RoomService.getRoom().subscribe(data=>{this.roomOb=data;
-    console.log(this.roomOb);
     })
   }
 
   getdataPurpose():void{
     this.PurposeService.getPurpose().subscribe(data=>{this.purposeOb=data;
-    console.log(this.purposeOb);
     })
   }
 
   highLight(): void{
     this.newBooking.roomId = this.highLightV
   }
+
   changeScroll(){
     const body = document.querySelector("body")
     body?.classList.add("noScroll")

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Room } from './room';
 import { Observable } from 'rxjs';
 
@@ -22,4 +22,3 @@ export class RoomService {
     return this.http.get<Room[]>('https://localhost:44377/api/Rooms/' + id)
   }
 }
-

@@ -30,6 +30,4 @@ export class BookingService {
   deleteBooking(id: Guid): Observable<Booking>{
     return this.http.delete<Booking>('https://localhost:44377/api/Bookings/'+id, this.httpOptions)
   }
-  
-
 }

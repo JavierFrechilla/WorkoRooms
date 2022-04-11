@@ -9,8 +9,6 @@ import { UserService } from '../user/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  
-
   us: User = {
     name: '',
     surname: '',

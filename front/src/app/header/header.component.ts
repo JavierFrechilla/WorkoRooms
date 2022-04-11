@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, NavigationEnd } from '@angular/router';
+import { Router } from '@angular/router';
 import { User } from '../user/user';
 import { UserService } from '../user/user.service';
-import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -23,10 +22,9 @@ export class HeaderComponent implements OnInit {
   localStorage?: any;
   id?: number;
   currentRoute: string;
+  element: any;
 
   constructor(public service: UserService, private router: Router) { }
-
-
 
   ngOnInit(): void {
     if (localStorage.getItem('User') != null && localStorage.getItem('User') != undefined) {
@@ -35,9 +33,7 @@ export class HeaderComponent implements OnInit {
       this.service.getUser(this.id).subscribe(data => {
         this.us = data
       });
-      console.log(this.us);
     }
-    
     this.getRoute();
   }
 
@@ -52,15 +48,4 @@ export class HeaderComponent implements OnInit {
   getRoute(): any{
     return window.location.href
   }
-
-  element: any;
-
-  darkMode(): void {
-    this.element = document.body;
-    this.element.classList.toggle("dark-mode");
- }
-
 }
-
-
-

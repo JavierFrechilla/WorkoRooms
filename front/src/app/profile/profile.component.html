@@ -2,40 +2,22 @@
 <a (click)="logOut()">Cerrar sesión</a>
 </div>
 <div *ngIf="us != undefined " class="loginElements">
-    
-
     <div class="profileIcon">
         <img  src="{{us.photo}}" alt="userimage">
     </div>
-    
-
-    <div class="form">
-    
+    <div class="form">  
         <h4>Nombre</h4>
         <input type="text" [(ngModel)]="us.name">
-
         <h4>Apellido</h4>
         <input type="text" [(ngModel)]="us.surname">
-
         <h4>Email</h4>
         <input type="email" [(ngModel)]="us.gmail">
-
         <h4>Contraseña</h4>
         <input type="text" [(ngModel)]="us.password">
-
         <h4>Rol</h4>
-        <input type="text" [(ngModel)]="us.role">
-        <!-- <h4>Foto</h4>
-        <input class="image" type="file" accept="image/png, image/jpeg" [(ngModel)]="us.photo"> -->
-        
+        <input type="text" [(ngModel)]="us.role">      
         <button (click)="updateUser(us)">Actualizar mi perfil</button>
-        <p *ngIf="refresh == true">Tus datos de perfil han sido actualizados.</p>
-        
-        
-        
-
-        
-        <button *ngIf="id!=undefined" class="deleteButton" type="button" title="delete loadout" (click)="deleteUser(id)">Eliminar cuenta</button>
-        
+        <p *ngIf="refresh == true">Tus datos de perfil han sido actualizados.</p>       
+        <button *ngIf="id!=undefined" class="deleteButton" type="button" title="delete loadout" (click)="deleteUser(id)">Eliminar cuenta</button>       
     </div>
 </div>

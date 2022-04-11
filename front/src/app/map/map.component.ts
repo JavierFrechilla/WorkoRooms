@@ -10,13 +10,6 @@ export class MapComponent implements OnChanges {
 
   constructor() { }
 
-  // ngOnInit(): void {
-  //   console.log(this.item)
-  // }
-
   ngOnChanges(): void {
-    // console.log(this.highLightV)
   }
-  
 }
-

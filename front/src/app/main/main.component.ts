@@ -53,6 +53,7 @@ export class MainComponent implements OnInit {
     name: '',
     icon: '',
   }
+  
   public events: any[] = [];
   public options: any;
   public arrayPeio: any[] = [];  
@@ -88,6 +89,7 @@ export class MainComponent implements OnInit {
       this.roomOb = data;   
     })
   }
+
   getdataPurpose(): void {
     this.purposeService.getPurpose().subscribe(data => {
       this.purposeOb = data;    
@@ -100,7 +102,7 @@ export class MainComponent implements OnInit {
       this.calendar.forEach(cal => {
         this.arrayPeio.push({ title: cal.userName + " \n " + cal.purposeName, start: cal.dateIn, end: cal.dateOut, color: cal.roomColor })
       });
-      // this.events = this.arrayPeio
+      this.events = this.arrayPeio
     });
   }
 
@@ -109,7 +111,6 @@ export class MainComponent implements OnInit {
       this.bookings = data;
       this.bookings.forEach(element => {
         element.array=element.participants.split(",")
-        console.log(element.array)
       }); 
       this.checkBooking();
     })
@@ -158,9 +159,3 @@ export class MainComponent implements OnInit {
     localStorage.setItem("Booking", JSON.stringify(booking))
   }
 }
-
-
-
-
-
-
