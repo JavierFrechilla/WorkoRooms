@@ -1,20 +1,10 @@
-
-    <div class="loginElements">
-
-        
-        <img src="/assets/img/login_illustration.svg" alt="placeholder">
-
-        <div class="form">
-
-            <h3>Inicio de sesión</h3>
-        
-            <input placeholder="Correo" type="text" [(ngModel)]="lo.gmail">
-            
-            <input placeholder="Contraseña" type="password" [(ngModel)]="lo.password">
-
-
-            <!-- *ngIf="lo.gmail !='' && lo.password !=''" -->
-            <button (click)="checkUser()">Iniciar sesión</button>
-            <p *ngIf="notLogged">Email o contraseña incorrectas. Inténtelo de nuevo.</p> 
-        </div>
+<div class="loginElements">
+    <img src="/assets/img/login_illustration.svg" alt="placeholder">
+    <div class="form">
+        <h3>Inicio de sesión</h3>
+        <input placeholder="Correo" type="text" [(ngModel)]="lo.gmail">  
+        <input placeholder="Contraseña" type="password" [(ngModel)]="lo.password">
+        <button (click)="checkUser()">Iniciar sesión</button>
+        <p *ngIf="notLogged">Email o contraseña incorrectas. Inténtelo de nuevo.</p> 
     </div>
+</div>

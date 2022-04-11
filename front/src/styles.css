@@ -1,5 +1,3 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
 @font-face {
@@ -7,8 +5,7 @@
     src: local("Moderat"), url(src/assets/fonts/Moderat_Extended_Bold.otf) format("opentype");
 }
 
-html,
-body {
+html, body {
     min-height: 100vh;
     margin: 0;
     animation: expand .8s ease forwards;
@@ -18,19 +15,6 @@ body {
 .noScroll {
     overflow-y: hidden;
 }
-
-
-/* @keyframes slideInLeft {
-    100% {
-      transform: translateY(0);
-      background-color: #FB088C;
-    }
-    0% {
-      transform: translateY(-100%);
-      background-color: #FB088C;
-      
-    }
-  } */
 
 .background {
     z-index: -1;
@@ -108,7 +92,6 @@ input:focus {
     color: black;
 }
 
-
 .fc.fc-unthemed .fc-toolbar .fc-button {
     color: #ffffff;
     background: #FB088C !important;
@@ -126,19 +109,11 @@ input:focus {
     font-weight: 700; 
 }
 
-/* .fc-event,
-.fc-event-dot {
-    background-color: #FB088C !important;
-    border: none !important;
-} */
-
 @media(max-width:767px) {
-    
     .fc{
         width: 95%;
         margin: auto;
     }
-
     .fc-toolbar{
         font-size: 0.5em;
     }

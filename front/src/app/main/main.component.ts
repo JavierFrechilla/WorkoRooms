@@ -23,6 +23,8 @@ export class MainComponent implements OnInit {
   
   constructor(public userService: UserService, public bookingService: BookingService, public purposeService: PurposeService, public roomService: RoomService, public CalendarService: DtocalendarService) { }
 
+  haveBooking :boolean = false
+
   userId: number = -1;
   purposeOb?= []
   roomOb?= []
@@ -51,6 +53,7 @@ export class MainComponent implements OnInit {
     name: '',
     icon: '',
   }
+  
   public events: any[] = [];
   public options: any;
   public arrayPeio: any[] = [];  
@@ -67,12 +70,6 @@ export class MainComponent implements OnInit {
         right: 'dayGridMonth,timeGridWeek,timeGridDay'
       },
       editable: false,
-    }
-    if (localStorage.getItem("User")) {
-      this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
-      this.userService.getUser(this.userId).subscribe(data => {
-        this.user = data;
-      }) 
     }
     this.getdataPurpose();
     this.getBookings();
@@ -92,6 +89,7 @@ export class MainComponent implements OnInit {
       this.roomOb = data;   
     })
   }
+
   getdataPurpose(): void {
     this.purposeService.getPurpose().subscribe(data => {
       this.purposeOb = data;    
@@ -110,11 +108,31 @@ export class MainComponent implements OnInit {
 
   getBookings(): void {
     this.bookingService.getBookings().subscribe(data => {
-      this.bookings = data;     
+      this.bookings = data;
       this.bookings.forEach(element => {
         element.array=element.participants.split(",")
       }); 
+      this.checkBooking();
     })
+  }
+
+  checkBooking(): void {
+    if (localStorage.getItem("User")) {
+      this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
+      this.userService.getUser(this.userId).subscribe(data => {
+        this.user = data;
+        let cont = 0;
+        console.log(this.bookings)
+        this.bookings.forEach(element => {
+          if(element.user.name == this.user.name && element.dateIn > this.today){
+            cont++ 
+          }
+        })
+        if(cont>0){
+          this.haveBooking = true
+        }
+      }) 
+    }
   }
 
   deleteBooking(booking: Booking): void{
