@@ -14,7 +14,6 @@ export class ProfileComponent implements OnInit {
   localStorage?: any;
   id?: number;
   us?: User;
-
   refresh: boolean = false;
 
   ngOnInit(): void {
@@ -25,8 +24,8 @@ export class ProfileComponent implements OnInit {
     this.localStorage = localStorage.getItem('User');
     this.id = parseInt(this.localStorage);
     this.service.getUser(this.id).subscribe(data =>{
-      this.us = data});
-    console.log(this.us);
+      this.us = data
+    });
   }
 
   updateUser(us: User):void{
@@ -36,7 +35,7 @@ export class ProfileComponent implements OnInit {
       console.log(this.us)
       setTimeout(function(){
         window.location.reload();
-     }, 100);
+      }, 100);
       this.refresh = true;
     }
   }

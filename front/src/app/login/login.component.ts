@@ -18,9 +18,7 @@ export class LoginComponent implements OnInit {
     password: '',
     role: '',
   }
-
   notLogged: boolean = false
-
   logged: number = -1;
 
   constructor(public userService: UserService) { }
@@ -40,5 +38,4 @@ export class LoginComponent implements OnInit {
       }
     })
   }
-
 }

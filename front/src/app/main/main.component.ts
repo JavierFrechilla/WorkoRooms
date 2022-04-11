@@ -104,7 +104,7 @@ export class MainComponent implements OnInit {
       this.calendar.forEach(cal => {
         this.arrayPeio.push({ title: cal.userName + " \n " + cal.purposeName, start: cal.dateIn, end: cal.dateOut, color: cal.roomColor })
       });
-      // this.events = this.arrayPeio
+      this.events = this.arrayPeio
     });
   }
 
@@ -113,7 +113,6 @@ export class MainComponent implements OnInit {
       this.bookings = data;     
       this.bookings.forEach(element => {
         element.array=element.participants.split(",")
-        console.log(element.array)
       }); 
     })
   }
@@ -142,9 +141,3 @@ export class MainComponent implements OnInit {
     localStorage.setItem("Booking", JSON.stringify(booking))
   }
 }
-
-
-
-
-
-

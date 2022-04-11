@@ -9,7 +9,6 @@ export class IntroComponent implements OnInit {
 
   constructor() { }
  
-
   ngOnInit(): void {
     this.changeScroll()
   }
@@ -17,6 +16,7 @@ export class IntroComponent implements OnInit {
   ngOnDestroy(): void{
     this.backToscroll()
   }
+
   changeScroll(){
     const body = document.querySelector("body")
     body?.classList.add("noScroll")
@@ -26,5 +26,4 @@ export class IntroComponent implements OnInit {
     const body = document.querySelector("body")
     body?.classList.remove("noScroll")
   }
-
 }
