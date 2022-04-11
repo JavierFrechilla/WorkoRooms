@@ -4,8 +4,7 @@
     <div class="map1">
         <img src="../../assets/img/map.svg" alt="">
     </div>
-
-
+ 
     <div class="width">
 
         <h3>Selecciona una sala</h3>
@@ -14,8 +13,6 @@
                 <input  (click)="highLight()" type="radio" [(ngModel)]="highLightV" [(ngModel)]="newBooking.roomId" [value]='room.id' name="enums">{{room.name}}
             </label>
         </form>
-
-
 
         <h3>Razón</h3>
         <select [(ngModel)]="newBooking.purposeId">
@@ -28,23 +25,26 @@
         <h3>Fecha de finalización</h3>
         <input type="datetime-local" [(ngModel)]="newBooking.dateOut" min={{newBooking.dateIn}}>
 
-        <!-- <h3>Participantes</h3>
-            <form *ngIf="newBooking.roomId == 1">
-            <label *ngFor="let user of userOb">
-                <input [(ngModel)]="participants" [value]='user' type="checkbox" name="enums2">{{user.name}}
+        <h3>Participantes</h3>
+        <form *ngIf="newBooking.roomId == 1">
+            <label *ngFor="let user of userOb; let i = index">
+                <input [(ngModel)]="participants[i+1]" [value]='user.id+1' type="checkbox" name="enums">{{user.name}}
             </label>
         </form> 
+        
         <form *ngIf="newBooking.roomId == 2">
-            <label *ngFor="let user of userOb">
-                <input [(ngModel)]="participants" [value]='user' type="checkbox" name="enums2">{{user.name}}
+            <label *ngFor="let user of userOb; let i = index">
+                <input [(ngModel)]="participants[i+1]" [value]='user.id+1' type="checkbox" name="enums2">{{user.name}}
             </label>
-        </form>
-        <select *ngIf="newBooking.roomId == 3" [(ngModel)]="participant.userId">
+        </form> 
+
+        <select *ngIf="newBooking.roomId == 3" [(ngModel)]="participants">
             <option *ngFor="let user of userOb" [value]='user.id'>{{user.name}}</option>
         </select>
-        <select *ngIf="newBooking.roomId == 4" [(ngModel)]="participant.userId">
+
+        <select *ngIf="newBooking.roomId == 4" [(ngModel)]="participants">
             <option *ngFor="let user of userOb" [value]='user.id'>{{user.name}}</option>
-        </select> -->
+        </select>
         
         <div>
             <button class="pinkButton" (click)="postBooking()" routerLink="/main">Crear reunión</button>

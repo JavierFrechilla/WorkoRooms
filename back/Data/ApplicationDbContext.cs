@@ -16,10 +16,6 @@ namespace workorooms.Data
 
         public DbSet<workorooms.Models.Booking> Booking { get; set; }
 
-        public DbSet<workorooms.Models.DTOBookingWithParticipants> DTOBookingWithParticipants { get; set; }
-
-        public DbSet<workorooms.Models.Participant> Participant { get; set; }
-
         public DbSet<workorooms.Models.Purpose> Purpose { get; set; }
 
         public DbSet<workorooms.Models.Room> Room { get; set; }

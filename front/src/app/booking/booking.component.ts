@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ParticipantService } from '../participant/participant.service';
-import { Participant } from '../participant/participant';
 import { Purpose } from '../purpose/purpose';
 import { PurposeService } from '../purpose/purpose.service';
 import { Room } from '../room/room';
@@ -17,7 +15,7 @@ import { BookingService } from './booking.service';
 })
 export class BookingComponent implements OnInit {
 
-  constructor(public service: BookingService, public UserService: UserService, public RoomService: RoomService, public PurposeService: PurposeService, public ParticipantService: ParticipantService) { }
+  constructor(public service: BookingService, public UserService: UserService, public RoomService: RoomService, public PurposeService: PurposeService) { }
 
   newBooking: Booking = {
     userId: 0,
@@ -25,12 +23,9 @@ export class BookingComponent implements OnInit {
     roomId: 0,
     dateIn: new Date(),
     dateOut: new Date(),
+    participants: ""
   };
-  participant: Participant = {
-    userId: 0,
-    bookingId: this.newBooking.id
-  };
-  participants?: Participant[];
+  participants: string[] = [];
   userOb?: User[];
   roomOb?: Room[];
   purposeOb?: Purpose[];
@@ -42,7 +37,6 @@ export class BookingComponent implements OnInit {
     this.getdataUser()
     this.getdataRoom()
     this.getdataPurpose()
-    // this.changeScroll()
     if(localStorage.getItem("User")){
       this.userId = JSON.parse(JSON.stringify(localStorage.getItem("User")))
       console.log(this.userId)
@@ -54,21 +48,19 @@ export class BookingComponent implements OnInit {
 
   postBooking():void{
     this.newBooking.userId = this.userId;
-    console.log(this.newBooking)
-    this.service.postBooking(this.newBooking).subscribe()
-    console.log(this.participant)
-    console.log(this.participants)
-    if(this.participants != undefined){
-      if(this.newBooking.roomId == 1 || this.newBooking.roomId == 2){
-        this.ParticipantService.postParticipants(this.participants).subscribe()
-      }
-      if(this.newBooking.roomId == 3 || this.newBooking.roomId == 4){
-        this.ParticipantService.postParticipant(this.participant).subscribe()
-      }
+    if(this.newBooking.roomId == 1||this.newBooking.roomId == 2){
+      let array = Object.keys(this.participants).filter((key)=> {return this.participants[key]});
+      array.forEach(element => {
+        this.newBooking.participants+=element+","
+      });
     }
+    else{
+      this.newBooking.participants = this.participants[0]
+    }
+    this.service.postBooking(this.newBooking).subscribe()
     setTimeout(function(){
       window.location.reload();
-   }, 100);
+    }, 1000);
   }
 
   getdataUser():void{
@@ -90,7 +82,6 @@ export class BookingComponent implements OnInit {
   }
 
   highLight(): void{
-    // console.log(this.highLightV)
     this.newBooking.roomId = this.highLightV
   }
   changeScroll(){
@@ -102,5 +93,4 @@ export class BookingComponent implements OnInit {
     const body = document.querySelector("body")
     body?.classList.remove("noScroll")
   }
-
 }
