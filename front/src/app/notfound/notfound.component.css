@@ -16,14 +16,11 @@ h3{
     text-align: center;
 }
 
-@media (max-width: 767px){
-    
+@media (max-width: 767px){  
     .center{
         flex-direction: column;
     }
-
     h3{
         font-size: 2em;
-    }
-    
+    }   
 }

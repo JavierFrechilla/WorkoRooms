@@ -107,10 +107,8 @@ body html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* align-items: center; */
     margin-top: 1em;
     min-height: 5em;
-    /* background-color: #F7CDE8; */
     color: #060606;
     border-radius: 1em;
     padding: 1em;
@@ -140,7 +138,6 @@ body html {
 
 .edit:hover {
     opacity: 80%;
-    /* filter: invert(100%); */
 }
 
 .columnIcons {
@@ -254,11 +251,9 @@ p {
         height: 4em;
     }
     .clickable {
-        /* position: fixed;   */
         bottom: 4em;
         justify-content: center;
         align-content: flex-end;
-        /* z-index: 2; */
         margin-bottom: 2em;
         margin: 2em;
     }

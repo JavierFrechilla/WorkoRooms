@@ -1,9 +1,7 @@
-/* map */
 .map svg {
     display: flex;
     height: 75vh;
     margin: auto;
-    /* transform: rotate(90deg); */
 }
 
 .hideThis {

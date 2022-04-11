@@ -48,40 +48,32 @@ button{
     color: white;
 }
 
-
 button:hover{
     background-color: #b91a72;
 }
-
 
 @media(max-width: 767px){
     .loginElements{
         flex-direction: column;
     }
-
     .form{
         width: 80%;
         justify-content: flex-start;
         margin-top: 2em;
     }
-
     input{
         height: 10%;
         font-size: 1.2em;
     }
-
     .logoContainer{
         text-align: center;
     }
-
     img{
         min-width: 70%;
     }
-
     h3{
         margin: 0;
     }
-
     button{
         margin:0;
     }

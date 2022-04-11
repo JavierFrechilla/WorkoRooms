@@ -48,9 +48,4 @@ export class HeaderComponent implements OnInit {
   getRoute(): any{
     return window.location.href
   }
-
-  darkMode(): void {
-    this.element = document.body;
-    this.element.classList.toggle("dark-mode");
-  }
 }
