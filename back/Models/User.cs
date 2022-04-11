@@ -11,6 +11,5 @@ namespace workorooms.Models
         public string Gmail { get; set; }
         public string Password { get; set; }
         public string Role { get; set; }
-        //public List<Booking> Bookings { get; set; }
     }
 }
