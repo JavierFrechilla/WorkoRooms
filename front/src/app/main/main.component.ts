@@ -23,12 +23,6 @@ export class MainComponent implements OnInit {
   
   constructor(public userService: UserService, public bookingService: BookingService, public purposeService: PurposeService, public roomService: RoomService, public CalendarService: DtocalendarService) { }
 
-  userId: number = -1;
-  purposeOb?= []
-  roomOb?= []
-  bookings = []
-  today: any = new Date().toISOString()
-  calendar?: Dtocalendar[];
   Room: Room = {
     id: 0,
     name: '',
@@ -51,6 +45,12 @@ export class MainComponent implements OnInit {
     name: '',
     icon: '',
   }
+  userId: number = -1;
+  purposeOb?= []
+  roomOb?= []
+  bookings = []
+  today: any = new Date().toISOString()
+  calendar?: Dtocalendar[];
   public events: any[] = [];
   public options: any;
   public arrayPeio: any[] = [];  
@@ -92,6 +92,7 @@ export class MainComponent implements OnInit {
       this.roomOb = data;   
     })
   }
+
   getdataPurpose(): void {
     this.purposeService.getPurpose().subscribe(data => {
       this.purposeOb = data;    

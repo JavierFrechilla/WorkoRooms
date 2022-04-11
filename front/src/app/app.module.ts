@@ -18,19 +18,16 @@ import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from './header/header.component';
 import { BookingComponent } from './booking/booking.component';
 import { ProfileComponent } from './profile/profile.component';
-import { CalendarComponent } from './calendar/calendar.component';
 import { RegisterComponent } from './register/register.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
- 
   {path: '', component: IntroComponent},
   {path: 'login', component: LoginComponent },
   {path:'register',component: RegisterComponent},
   {path:'main',component: MainComponent},
   {path:'profile',component: ProfileComponent},
   {path: 'booking', component:BookingComponent},
-  {path:'calendar',component:CalendarComponent},
   {path: 'edit', component: EditComponent},
   {path: '**', component: NotfoundComponent},
 ]
@@ -46,7 +43,6 @@ const routes: Routes = [
     ProfileComponent,
     NotfoundComponent,
     HeaderComponent,
-    CalendarComponent, 
     MapComponent, 
     EditComponent 
    ],

@@ -30,7 +30,6 @@ h3 {
 }
 
 .map {
-    /* display: flex; */
     transform: rotate(90deg);
     margin-right: 10em;
     margin-bottom: 20em;

@@ -32,7 +32,6 @@ export class ProfileComponent implements OnInit {
     if (this.us != undefined && us?.id != undefined) {
       this.us = us
       this.service.updateUser(this.us).subscribe()
-      console.log(this.us)
       setTimeout(function(){
         window.location.reload();
       }, 100);
