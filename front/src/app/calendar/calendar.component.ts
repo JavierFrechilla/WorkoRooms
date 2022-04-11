@@ -45,7 +45,7 @@ export class CalendarComponent implements OnInit {
       this.calendar.forEach(cal => {
         this.arrayPeio.push({ title: cal.userName + " \n " + cal.purposeName, start: cal.dateIn, end: cal.dateOut, color: cal.roomColor })
       });
-      this.events = this.arrayPio
+      this.events = this.arrayPeio
     });
   }
 }

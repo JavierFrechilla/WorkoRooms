@@ -4,7 +4,13 @@
             <h3 class="bookingIntro">Mis reservas</h3>
             <img class="clickable" src="/assets/img/plus.svg" alt="plusButton" routerLink="/booking">
         </div>
+
+
+        <div *ngIf="!haveBooking ">
+            <p>No tienes ninguna rerserva activa</p>
+        </div>
         <div *ngFor="let booking of bookings">
+
             <div *ngIf="booking.user.name == user.name">
                 <div class="card" *ngIf="booking.dateIn > today" style="background-color: {{booking.room.color}}">
                     <div class="cardRow">
@@ -20,6 +26,8 @@
                     </div>
                 </div>
             </div>
+
+
             <div *ngFor="let participant of booking.array">
                 <div *ngIf="participant == user.id">
                     <div class="card" *ngIf="booking.dateIn > today" style="background-color: {{booking.room.color}}">
