@@ -37,11 +37,10 @@ export class CalendarComponent implements OnInit {
       editable: false,
     }
   }
-
+  
   getdataBookings(): void {
     this.CalendarService.getData().subscribe(data => {
       this.calendar = data;
-      // console.log(this.calendar);
       this.calendar.forEach(cal => {
         this.arrayPeio.push({ title: cal.userName + " \n " + cal.purposeName, start: cal.dateIn, end: cal.dateOut, color: cal.roomColor })
       });

@@ -21,38 +21,34 @@ export class EditComponent implements OnInit {
   purposeOb?: Purpose[];
   today: any = new Date().toISOString().substring(0, 16)
   highLightV: number = -1;
+  
   ngOnInit(): void {
     if (localStorage.getItem('Booking') != null && localStorage.getItem('Booking') != undefined) {
       this.localStorage = localStorage.getItem('Booking');
       this.newBooking = JSON.parse(this.localStorage);
-      console.log(this.newBooking);
     }
     this.getdataPurpose()
-    this.getdataRoom()
-    
+    this.getdataRoom()   
   }
 
   updateBooking(booking: Booking):void{
     if (booking != undefined) {
       this.newBooking = booking
       this.service.updateBooking(this.newBooking).subscribe()
-      console.log(this.newBooking)
     }
   }
   
   getdataRoom():void{
     this.RoomService.getRoom().subscribe(data=>{this.roomOb=data;
-    console.log(this.roomOb);
     })
   }
 
   getdataPurpose():void{
     this.PurposeService.getPurpose().subscribe(data=>{this.purposeOb=data;
-    console.log(this.purposeOb);
     })
   }
+
   highLight(): void{
-    // console.log(this.highLightV)
     this.newBooking.roomId = this.highLightV
   }
 }

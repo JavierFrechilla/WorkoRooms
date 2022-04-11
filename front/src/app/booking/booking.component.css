@@ -57,13 +57,13 @@ h3 {
         width: 90vw;
         margin: auto;
         align-items: center;
+        gap: 0;
     }
     .map {
         display: none;
     }
     .width {
         font-size: 0.9em;
-        justify-content: center;
         padding: 0;
         margin: 0;
         width: 70vw;

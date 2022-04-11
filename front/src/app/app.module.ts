@@ -1,72 +1,54 @@
 import { MbscModule } from '@mobiscroll/angular';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
-
-import { AppComponent } from './app.component';
-import { RoomComponent } from './room/room.component';
-import { UserComponent } from './user/user.component';
-import { PurposeComponent } from './purpose/purpose.component';
-import { ParticipantComponent } from './participant/participant.component';
-import { BookingComponent } from './booking/booking.component';
-import { DtobookingComponent } from './dtobooking/dtobooking.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LoginComponent } from './login/login.component';
-import { NotfoundComponent } from './notfound/notfound.component';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
-import { IntroComponent } from './intro/intro.component';
-import { WatermarkComponent } from './watermark/watermark.component';
-
+import { HttpClientModule } from '@angular/common/http'
+import { FullCalendarModule } from 'primeng/fullcalendar'
 import { RouterModule, Routes } from '@angular/router';
-import { RegisterComponent } from './register/register.component';
-import { MainComponent } from './main/main.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ProfileComponent } from './profile/profile.component';
-import { HeaderComponent } from './header/header.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import {FullCalendarModule} from 'primeng/fullcalendar'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
+import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
-import { DtocalendarComponent } from './dtocalendar/dtocalendar.component';
 import { EditComponent } from './edit/edit.component';
+import { MainComponent } from './main/main.component';
+import { IntroComponent } from './intro/intro.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
+import { BookingComponent } from './booking/booking.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { RegisterComponent } from './register/register.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
  
-  {path: 'login', component: LoginComponent },
   {path: '', component: IntroComponent},
+  {path: 'login', component: LoginComponent },
   {path:'register',component: RegisterComponent},
   {path:'main',component: MainComponent},
-  {path:'user',component: UserComponent},
   {path:'profile',component: ProfileComponent},
   {path: 'booking', component:BookingComponent},
   {path:'calendar',component:CalendarComponent},
   {path: 'edit', component: EditComponent},
   {path: '**', component: NotfoundComponent},
-
 ]
 
 @NgModule({
   declarations: [	
     AppComponent,
-    RoomComponent,
-    UserComponent,
-    PurposeComponent,
-    ParticipantComponent,
     BookingComponent,
-    DtobookingComponent,
     IntroComponent,
-    WatermarkComponent,
     LoginComponent,
     MainComponent,
     RegisterComponent,
-    NavbarComponent,
     ProfileComponent,
     NotfoundComponent,
     HeaderComponent,
     CalendarComponent, 
-    MapComponent, EditComponent 
+    MapComponent, 
+    EditComponent 
    ],
 
   imports: [
